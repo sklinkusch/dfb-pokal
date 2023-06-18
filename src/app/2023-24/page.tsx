@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { jsx } from 'theme-ui'
 
 type Match = {
@@ -101,6 +102,9 @@ export default function DFBPokal_2023_24() {
         <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
         <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
       </div>))}
+      <div style={{ marginTop: "1.8rem", textAlign: "center" }}>
+        <Link href="/" style={{ color: "blue"}}>Zur Hauptseite</Link>
+      </div>
     </main>
   )
 }
