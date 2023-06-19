@@ -14,7 +14,7 @@ type Match = {
 type Data = { [key: string]: Match[] }
 
 export default function DFBPokal_2023_24() {
-  const leagues: { [key: number]: string } = {
+  const leagues: { [key: string]: string } = {
     1: '1. Bundesliga',
     2: '2. Bundesliga',
     3: '3. Liga',
@@ -64,54 +64,28 @@ export default function DFBPokal_2023_24() {
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2023/24</h1>
       <h2 className={styles.h2}>1. Hauptrunde</h2>
-      <h3 className={styles.h3}>Oberliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`5_2_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>Oberliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`5_1_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>Regionalliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`4_2_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>Regionalliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`4_1_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>3. Liga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`3_2_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>3. Liga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`3_1_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>2. Bundesliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`2_2_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
-      <h3 className={styles.h3}>2. Bundesliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`2_1_${index}`}>
-        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-        <span>{match.result ? match.result : "–:–"}</span>
-      </div>))}
+      {Object.keys(leagues).sort((a,b) => parseInt(b, 10) - parseInt(a, 10)).map(hleague => {
+        return Object.keys(leagues).sort((a, b) => parseInt(b, 10) - parseInt(a, 10)).map(aleague => {
+          const hamatches = data['1. Hauptrunde'].filter(match => match.homeLeague === parseInt(hleague, 10) && match.awayLeague === parseInt(aleague, 10))
+          const hlname = leagues[hleague]
+          const alname = leagues[aleague]
+          if (hamatches.length > 0) {
+            return (
+              <div key={`${hleague}_${aleague}`}>
+                <h3 className={styles.h3}>{hlname} – {alname} ({hamatches.length})</h3>
+                {hamatches.map((match, index) => {
+                  return (
+                    <div className={styles.flex} key={`${hleague}_${aleague}_${index}`}>
+                      <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+                      <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+                      <span>{match.result ? match.result : "–:–"}</span>
+                    </div>
+                  )})}
+              </div>
+            )
+          }
+        })
+      })}
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
       </div>
