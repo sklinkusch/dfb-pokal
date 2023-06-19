@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { jsx } from 'theme-ui'
+import styles from './page.module.css'
 
 type Match = {
   home: string
@@ -14,6 +14,16 @@ type Match = {
 type Data = { [key: string]: Match[] }
 
 export default function DFBPokal_2023_24() {
+  const leagues: { [key: number]: string } = {
+    1: '1. Bundesliga',
+    2: '2. Bundesliga',
+    3: '3. Liga',
+    4: 'Regionalliga',
+    5: 'Oberliga',
+    6: 'Verbandsliga',
+    7: 'Landesliga',
+    8: 'Bezirksliga'
+  }
   const data: Data = {
     '1. Hauptrunde': [
       { home: 'FC 08 Homburg', homeLeague: 4, away: 'SV Darmstadt 98', awayLeague: 1 },
@@ -51,59 +61,59 @@ export default function DFBPokal_2023_24() {
     ]
   }
   return (
-    <main style={{ padding: "3rem" }}>
-      <h1 style={{ marginBottom: "1rem" }}>DFB-Pokal 2023/24</h1>
-      <h2 style={{ marginBlock: "0.5rem" }}>1. Hauptrunde</h2>
-      <h3 style={{ marginBlock: "0.3rem" }}>Oberliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 2).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`5_2_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+    <main className={styles.main}>
+      <h1 className={styles.h1}>DFB-Pokal 2023/24</h1>
+      <h2 className={styles.h2}>1. Hauptrunde</h2>
+      <h3 className={styles.h3}>Oberliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 2).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`5_2_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>Oberliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 1).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`5_1_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>Oberliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 1).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 5 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`5_1_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>Regionalliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 2).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`4_2_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>Regionalliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 2).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`4_2_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>Regionalliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 1).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`4_1_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>Regionalliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 1).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 4 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`4_1_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>3. Liga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 2).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`3_2_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>3. Liga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 2).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`3_2_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>3. Liga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 1).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`3_1_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>3. Liga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 1).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 3 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`3_1_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>2. Bundesliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 2).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 2).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`2_2_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>2. Bundesliga – 2. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 2).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 2).map((match, index) => (<div className={styles.flex} key={`2_2_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <h3 style={{ marginBlock: "0.3rem" }}>2. Bundesliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 1).length})</h3>
-      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 1).map((match, index) => (<div style={{ display: "flex", flexDirection: "row"}} key={`2_1_${index}`}>
-        <span style={{ flex: "0 0 15rem", marginRight: "2rem", color: match.homeWinner ? "blue" : "black", fontWeight: match.homeWinner ? 700 : 400 }}>{match.home}</span>
-        <span style={{ flex: "0 0 15rem", color: match.awayWinner ? "blue" : "black", fontWeight: match.awayWinner ? 700 : 400 }}>{match.away}</span>
-        <span style={{ flex: "0 0 15rem"}}>{match.result ? match.result : "–:–"}</span>
+      <h3 className={styles.h3}>2. Bundesliga – 1. Bundesliga ({data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 1).length})</h3>
+      {data['1. Hauptrunde'] && data['1. Hauptrunde'].filter(match => match.homeLeague === 2 && match.awayLeague === 1).map((match, index) => (<div className={styles.flex} key={`2_1_${index}`}>
+        <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
+        <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
+        <span>{match.result ? match.result : "–:–"}</span>
       </div>))}
-      <div style={{ marginTop: "1.8rem", textAlign: "center" }}>
-        <Link href="/" style={{ color: "blue"}}>Zur Hauptseite</Link>
+      <div className={styles.linkContainer}>
+        <Link href="/" className={styles.link}>Zur Hauptseite</Link>
       </div>
     </main>
   )
