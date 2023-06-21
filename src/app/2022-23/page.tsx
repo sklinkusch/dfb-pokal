@@ -86,6 +86,12 @@ function Round({matches, title}: RoundProps) {
 
 export default function DFBPokal_2023_24() {
   const data: Data = {
+    'Viertelfinale': [
+      { home: 'SG Eintracht Frankfurt', homeLeague: 1, away: '1. FC Union Berlin', awayLeague: 1, result: '2:0', identifier: 1 },
+      { home: 'FC Bayern München', homeLeague: 1, away: 'SC Freiburg', awayLeague: 1, result: '1:2', identifier: 2 },
+      { home: '1. FC Nürnberg', homeLeague: 2, away: 'VfB Stuttgart', awayLeague: 1, result: '0:1', identifier: 2 },
+      { home: 'RB Leipzig', homeLeague: 1, away: 'Borussia Dortmund', awayLeague: 1, result: '2:0', identifier: 1 }
+    ],
     'Achtelfinale': [
       { home: 'SC Paderborn 07', homeLeague: 2, away: 'VfB Stuttgart', awayLeague: 1, result: '1:2', identifier: 2 },
       { home: '1. FC Union Berlin', homeLeague: 1, away: 'VfL Wolfsburg', awayLeague: 1, result: '2:1', identifier: 1 },
@@ -152,6 +158,7 @@ export default function DFBPokal_2023_24() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2022/23</h1>
+      <Round matches={data.Viertelfinale} title="Viertelfinale" />
       <Round matches={data.Achtelfinale} title="Achtelfinale" />
       <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" />
