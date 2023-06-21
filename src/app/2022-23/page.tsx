@@ -12,7 +12,29 @@ type Match = {
 
 type Data = { [key: string]: Match[] }
 
-export default function DFBPokal_2023_24() {
+type MatchProps = {
+  home: string
+  away: string
+  result?: string
+  identifier?: number
+}
+
+type RoundProps = {
+  matches: Match[]
+  title: string
+}
+
+function Match({home, away, result, identifier}: MatchProps) {
+  return (
+    <div className={styles.flex}>
+      <span className={identifier === 1 ? styles.winner : undefined}>{home}</span>
+      <span className={identifier === 2 ? styles.winner : undefined}>{away}</span>
+      <span>{result ? result : "–:–"}</span>
+    </div>
+  )
+}
+
+function Round({matches, title}: RoundProps) {
   const leagueIdentifiers = [
     '5BW', '5HB', '5NI', '5NO', '5RS', 5, '4BY', '4N', '4NO', '4SW', '4W', 3, 2, 1
   ]
@@ -31,7 +53,49 @@ export default function DFBPokal_2023_24() {
     '5NO': 'Oberliga Nordost',
     '5RS': 'Oberliga Rheinland-Pfalz/Saar',
   }
+  return (
+    <>
+      <h2 className={styles.h2}>{title}</h2>
+      {leagueIdentifiers.map((hleague, idx: number) => {
+        return leagueIdentifiers.slice(idx).map(aleague => {
+          const hamatches = matches.filter(match => (`${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`) || (`${match.homeLeague}` === `${aleague}` && `${match.awayLeague}` === `${hleague}`))
+          const hindex = leagueIdentifiers.indexOf(hleague)
+          const aindex = leagueIdentifiers.indexOf(aleague)
+          const mindex = Math.min(hindex, aindex)
+          const pindex = Math.max(hindex, aindex)
+          const mkey = hindex === mindex ? hleague : aleague
+          const pkey = hindex === pindex ? hleague : aleague
+          const loname = hindex <= aindex ? leagues[hleague] : leagues[aleague]
+          const hiname = hindex > aindex ? leagues[hleague] : leagues[aleague]
+          if (hamatches.length > 0) {
+            return (
+              <div key={`${mkey}_${pkey}`}>
+                <h3 className={styles.h3}>{loname} – {hiname}</h3>
+                {hamatches.map((match, index) => {
+                  return (
+                    <Match home={match.home} away={match.away} result={match.result} identifier={match.identifier} key={`${mkey}_${pkey}_${index}`} />
+                  )})}
+              </div>
+            )
+          }
+        })
+      })}
+    </>
+  )
+}
+
+export default function DFBPokal_2023_24() {
   const data: Data = {
+    'Achtelfinale': [
+      { home: 'SC Paderborn 07', homeLeague: 2, away: 'VfB Stuttgart', awayLeague: 1, result: '1:2', identifier: 2 },
+      { home: '1. FC Union Berlin', homeLeague: 1, away: 'VfL Wolfsburg', awayLeague: 1, result: '2:1', identifier: 1 },
+      { home: 'RB Leipzig', homeLeague: 1, away: 'TSG 1899 Hoffenheim', awayLeague: 1, result: '3:1', identifier: 1 },
+      { home: '1. FSV Mainz 05', homeLeague: 1, away: 'FC Bayern München', awayLeague: 1, result: '0:4', identifier: 2 },
+      { home: 'SV Sandhausen', homeLeague: 2, away: 'SC Freiburg', awayLeague: 1, result: '0:2', identifier: 2 },
+      { home: 'SG Eintracht Frankfurt', homeLeague: 1, away: 'SV Darmstadt 98', awayLeague: 2, result: '4:2', identifier: 1 },
+      { home: '1. FC Nürnberg', homeLeague: 2, away: 'Fortuna Düsseldorf', awayLeague: 2, result: '1:1 n.V. (1:1), 5:3 i.E.', identifier: 1 },
+      { home: 'VfL Bochum', homeLeague: 1, away: 'Borussia Dortmund', awayLeague: 1, result: '1:2', identifier: 2 }
+    ],
     '2. Hauptrunde': [
       { home: 'VfB Lübeck', homeLeague: '4N', away: '1. FSV Mainz 05', awayLeague: 1, result: '0:3', identifier: 2 },
       { home: 'Stuttgarter Kickers', homeLeague: '5BW', away: 'SG Eintracht Frankfurt', awayLeague: 1, result: '0:2', identifier: 2 },
@@ -88,64 +152,9 @@ export default function DFBPokal_2023_24() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2022/23</h1>
-      <h2 className={styles.h2}>2. Hauptrunde</h2>
-      {leagueIdentifiers.map((hleague, idx: number) => {
-        return leagueIdentifiers.slice(idx).map(aleague => {
-          const hamatches = data['2. Hauptrunde'].filter(match => (`${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`) || (`${match.homeLeague}` === `${aleague}` && `${match.awayLeague}` === `${hleague}`))
-          const hindex = leagueIdentifiers.indexOf(hleague)
-          const aindex = leagueIdentifiers.indexOf(aleague)
-          const mindex = Math.min(hindex, aindex)
-          const pindex = Math.max(hindex, aindex)
-          const mkey = hindex === mindex ? hleague : aleague
-          const pkey = hindex === pindex ? hleague : aleague
-          const loname = hindex <= aindex ? leagues[hleague] : leagues[aleague]
-          const hiname = hindex > aindex ? leagues[hleague] : leagues[aleague]
-          if (hamatches.length > 0) {
-            return (
-              <div key={`${mkey}_${pkey}`}>
-                <h3 className={styles.h3}>{loname} – {hiname}</h3>
-                {hamatches.map((match, index) => {
-                  return (
-                    <div className={styles.flex} key={`${mkey}_${pkey}_${index}`}>
-                      <span className={match.identifier === 1 ? styles.winner : undefined}>{match.home}</span>
-                      <span className={match.identifier === 2 ? styles.winner : undefined}>{match.away}</span>
-                      <span>{match.result ? match.result : "–:–"}</span>
-                    </div>
-                  )})}
-              </div>
-            )
-          }
-        })
-      })}
-      <h2 className={styles.h2}>1. Hauptrunde</h2>
-      {leagueIdentifiers.map((hleague, idx: number) => {
-        return leagueIdentifiers.slice(idx).map(aleague => {
-          const hamatches = data['1. Hauptrunde'].filter(match => (`${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`) || (`${match.homeLeague}` === `${aleague}` && `${match.awayLeague}` === `${hleague}`))
-          const hindex = leagueIdentifiers.indexOf(hleague)
-          const aindex = leagueIdentifiers.indexOf(aleague)
-          const mindex = Math.min(hindex, aindex)
-          const pindex = Math.max(hindex, aindex)
-          const mkey = hindex === mindex ? hleague : aleague
-          const pkey = hindex === pindex ? hleague : aleague
-          const loname = hindex <= aindex ? leagues[hleague] : leagues[aleague]
-          const hiname = hindex > aindex ? leagues[hleague] : leagues[aleague]
-          if (hamatches.length > 0) {
-            return (
-              <div key={`${mkey}_${pkey}`}>
-                <h3 className={styles.h3}>{loname} – {hiname}</h3>
-                {hamatches.map((match, index) => {
-                  return (
-                    <div className={styles.flex} key={`${mkey}_${pkey}_${index}`}>
-                      <span className={match.identifier === 1 ? styles.winner : undefined}>{match.home}</span>
-                      <span className={match.identifier === 2 ? styles.winner : undefined}>{match.away}</span>
-                      <span>{match.result ? match.result : "–:–"}</span>
-                    </div>
-                  )})}
-              </div>
-            )
-          }
-        })
-      })}
+      <Round matches={data.Achtelfinale} title="Achtelfinale" />
+      <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" />
+      <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
       </div>
