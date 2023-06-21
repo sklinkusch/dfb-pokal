@@ -40,7 +40,15 @@ export default function DFBPokal_2023_24() {
       { home: 'SV Elversberg', homeLeague: 3, away: 'VfL Bochum', awayLeague: 1, result: '0:1', identifier: 2},
       { home: 'Eintracht Braunschweig', homeLeague: 2, away: 'VfL Wolfsburg', awayLeague: 1, result: '1:2', identifier: 2 },
       { home: 'TSG 1899 Hoffenheim', homeLeague: 1, away: 'FC Schalke 04', awayLeague: 1, result: '5:1', identifier: 1 },
-      { home: 'SV Darmstadt 98', homeLeague: 2, away: 'Borussia Mönchengladbach', awayLeague: 1, result: '2:1', identifier: 1 }
+      { home: 'SV Darmstadt 98', homeLeague: 2, away: 'Borussia Mönchengladbach', awayLeague: 1, result: '2:1', identifier: 1 },
+      { home: 'Hannover 96', homeLeague: 2, away: 'Borussia Dortmund', awayLeague: 1, result: '0:2', identifier: 2 },
+      { home: 'SC Freiburg', homeLeague: 1, away: 'FC St. Pauli', awayLeague: 2, result: '2:1 n.V. (1:1)', identifier: 1 },
+      { home: 'SV Sandhausen', homeLeague: 2, away: 'Karlsruher SC', awayLeague: 2, result: '2:2 n.V. (1:1), 8:7 i.E.', identifier: 1 },
+      { home: 'SC Paderborn 07', homeLeague: 2, away: 'SV Werder Bremen', awayLeague: 1, result: '2:2 n.V. (2:2), 5:4 i.E.', identifier: 1 },
+      { home: 'FC Augsburg', homeLeague: 1, away: 'FC Bayern München', awayLeague: 1, result: '2:5', identifier: 2 },
+      { home: 'VfB Stuttgart', homeLeague: 1, away: 'Arminia Bielefeld', awayLeague: 2, result: '6:0', identifier: 1 },
+      { home: '1. FC Union Berlin', homeLeague: 1, away: '1. FC Heidenheim', awayLeague: 2, result: '2:0', identifier: 1 },
+      { home: 'SSV Jahn Regensburg', homeLeague: 2, away: 'Fortuna Düsseldorf', awayLeague: 2, result: '0:3', identifier: 2 }
     ],
     '1. Hauptrunde': [
       { home: 'TSG Neustrelitz', homeLeague: '5NO', away: 'Karlsruher SC', awayLeague: 2, result: '0:8', identifier: 2 },
