@@ -7,11 +7,82 @@ type Match = {
   homeLeague: string | number
   awayLeague: string | number
   result?: string
-  homeWinner?: boolean
-  awayWinner?: boolean
+  identifier?: number
 }
 
 type Data = { [key: string]: Match[] }
+
+type MatchProps = {
+  home: string
+  away: string
+  result?: string
+  identifier?: number
+}
+
+type RoundProps = {
+  matches: Match[]
+  title: string
+}
+
+function Match({home, away, result, identifier}: MatchProps) {
+  return (
+    <div className={styles.flex}>
+      <span className={identifier === 1 ? styles.winner : undefined}>{home}</span>
+      <span className={identifier === 2 ? styles.winner : undefined}>{away}</span>
+      <span>{result ? result : "–:–"}</span>
+    </div>
+  )
+}
+
+function Round({matches, title}: RoundProps) {
+  const leagueIdentifiers = [
+    '5BW', '5HB', '5NI', '5NO', '5RS', 5, '4BY', '4N', '4NO', '4SW', '4W', 3, 2, 1
+  ]
+  const leagues: { [key: string]: string } = {
+    1: '1. Bundesliga',
+    2: '2. Bundesliga',
+    3: '3. Liga',
+    '4BY': 'Regionalliga Bayern',
+    '4N': 'Regionalliga Nord',
+    '4NO': 'Regionalliga Nordost',
+    '4SW': 'Regionalliga Südwest',
+    '4W': 'Regionalliga West',
+    '5BW': 'Oberliga Baden-Württemberg',
+    '5HB': 'Oberliga Bremen',
+    '5NI': 'Oberliga Niedersachsen',
+    '5NO': 'Oberliga Nordost',
+    '5RS': 'Oberliga Rheinland-Pfalz/Saar',
+  }
+  return (
+    <>
+      <h2 className={styles.h2}>{title}</h2>
+      {leagueIdentifiers.map((hleague, idx: number) => {
+        return leagueIdentifiers.slice(idx).map(aleague => {
+          const hamatches = matches.filter(match => (`${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`) || (`${match.homeLeague}` === `${aleague}` && `${match.awayLeague}` === `${hleague}`))
+          const hindex = leagueIdentifiers.indexOf(hleague)
+          const aindex = leagueIdentifiers.indexOf(aleague)
+          const mindex = Math.min(hindex, aindex)
+          const pindex = Math.max(hindex, aindex)
+          const mkey = hindex === mindex ? hleague : aleague
+          const pkey = hindex === pindex ? hleague : aleague
+          const loname = hindex <= aindex ? leagues[hleague] : leagues[aleague]
+          const hiname = hindex > aindex ? leagues[hleague] : leagues[aleague]
+          if (hamatches.length > 0) {
+            return (
+              <div key={`${mkey}_${pkey}`}>
+                <h3 className={styles.h3}>{loname} – {hiname}</h3>
+                {hamatches.map((match, index) => {
+                  return (
+                    <Match home={match.home} away={match.away} result={match.result} identifier={match.identifier} key={`${mkey}_${pkey}_${index}`} />
+                  )})}
+              </div>
+            )
+          }
+        })
+      })}
+    </>
+  )
+}
 
 export default function DFBPokal_2023_24() {
   const leagueIdentifiers = [
@@ -71,29 +142,12 @@ export default function DFBPokal_2023_24() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2023/24</h1>
-      <h2 className={styles.h2}>1. Hauptrunde</h2>
-      {leagueIdentifiers.map(hleague => {
-        return leagueIdentifiers.map(aleague => {
-          const hamatches = data['1. Hauptrunde'].filter(match => `${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`)
-          const hlname = leagues[hleague]
-          const alname = leagues[aleague]
-          if (hamatches.length > 0) {
-            return (
-              <div key={`${hleague}_${aleague}`}>
-                <h3 className={styles.h3}>{hlname} – {alname}</h3>
-                {hamatches.map((match, index) => {
-                  return (
-                    <div className={styles.flex} key={`${hleague}_${aleague}_${index}`}>
-                      <span className={match.homeWinner ? styles.winner : undefined}>{match.home}</span>
-                      <span className={match.awayWinner ? styles.winner : undefined}>{match.away}</span>
-                      <span>{match.result ? match.result : "–:–"}</span>
-                    </div>
-                  )})}
-              </div>
-            )
-          }
-        })
-      })}
+      {/* <Round matches={data.Finale} title="Finale" /> */}
+      {/* <Round matches={data.Halbfinale} title="Halbfinale" /> */}
+      {/* <Round matches={data.Viertelfinale} title="Viertelfinale" /> */}
+      {/* <Round matches={data.Achtelfinale} title="Achtelfinale" /> */}
+      {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" /> */}
+      <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
       </div>
