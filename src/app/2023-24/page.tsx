@@ -36,6 +36,7 @@ function Match({home, away, result, identifier, date}: MatchProps) {
       <span className={identifier === 1 ? styles.winner : undefined}>{home}</span>
       <span className={identifier === 2 ? styles.winner : undefined}>{away}</span>
       <span>{result ? result : formattedDate ? formattedDate : "–:–"}</span>
+      {result && <span>{formattedDate}</span>}
     </div>
   )
 }
