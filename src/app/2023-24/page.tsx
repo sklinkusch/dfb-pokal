@@ -153,7 +153,7 @@ export default function DFBPokal_2023_24() {
       { home: 'SV Oberachern', homeLeague: '5BW', away: 'SC Freiburg', awayLeague: 1, date: "2023-08-13T13:30:00Z" },
       { home: 'TuS Bersenbrück', homeLeague: '5NI', away: 'Borussia Mönchengladbach', awayLeague: 1, date: "2023-08-11T16:00:00Z", result: "0:7", identifier: 2 },
       { home: 'Arminia Bielefeld', homeLeague: 3, away: 'VfL Bochum', awayLeague: 1, date: "2023-08-12T16:00:00Z" },
-      { home: 'Eintracht Braunschweig', homeLeague: 2, away: 'FC Schalke 04', awayLeague: 2, date: "2023-08-11T18:45:00Z" }
+      { home: 'Eintracht Braunschweig', homeLeague: 2, away: 'FC Schalke 04', awayLeague: 2, date: "2023-08-11T18:45:00Z", result: "1:3", identifier: 2 }
     ]
   }
   return (
