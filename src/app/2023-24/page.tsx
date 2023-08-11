@@ -123,7 +123,7 @@ export default function DFBPokal_2023_24() {
     '1. Hauptrunde': [
       { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SV Darmstadt 98', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
       { home: 'Hallescher FC', homeLeague: 3, away: 'SpVgg Greuther Fürth', awayLeague: 2, date: "2023-08-12T16:00:00Z" },
-      { home: 'SV Sandhausen', homeLeague: 3, away: 'Hannover 96', awayLeague: 2, date: "2023-08-11T16:00:00Z" },
+      { home: 'SV Sandhausen', homeLeague: 3, away: 'Hannover 96', awayLeague: 2, date: "2023-08-11T16:00:00Z", result: "3:3 n.V. (3:3), 4:2 i.E.", identifier: 1 },
       { home: 'VfL Osnabrück', homeLeague: 2, away: '1. FC Köln', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
       { home: 'SV Atlas Delmenhorst', homeLeague: '5NI', away: 'FC St. Pauli', awayLeague: 2, date: "2023-08-12T13:30:00Z" },
       { home: 'FV Illertissen', homeLeague: '4BY', away: 'Fortuna Düsseldorf', awayLeague: 2, date: "2023-08-13T13:30:00Z" },
@@ -147,10 +147,10 @@ export default function DFBPokal_2023_24() {
       { home: 'SV Wehen Wiesbaden', homeLeague: 2, away: 'RB Leipzig', awayLeague: 1, date: "2023-09-27T18:45:00Z" },
       { home: 'FC Teutonia 05 Ottensen', homeLeague: '4N', away: 'TSV Bayer 04 Leverkusen', awayLeague: 1, date: "2023-08-12T13:30:00Z" },
       { home: 'FC Carl Zeiss Jena', homeLeague: '4NO', away: 'Hertha BSC Berlin', awayLeague: 2, date: "2023-08-12T11:00:00Z" },
-      { home: '1. FC Saarbrücken', homeLeague: 3, away: 'Karlsruher SC', awayLeague: 2, date: "2023-08-11T16:00:00Z" },
+      { home: '1. FC Saarbrücken', homeLeague: 3, away: 'Karlsruher SC', awayLeague: 2, date: "2023-08-11T16:00:00Z", result: "2:1", identifier: 1 },
       { home: 'FC Gütersloh', homeLeague: '4W', away: 'Holstein Kiel', awayLeague: 2, date: "2023-08-12T13:30:00Z" },
       { home: 'SV Oberachern', homeLeague: '5BW', away: 'SC Freiburg', awayLeague: 1, date: "2023-08-13T13:30:00Z" },
-      { home: 'TuS Bersenbrück', homeLeague: '5NI', away: 'Borussia Mönchengladbach', awayLeague: 1, date: "2023-08-11T16:00:00Z" },
+      { home: 'TuS Bersenbrück', homeLeague: '5NI', away: 'Borussia Mönchengladbach', awayLeague: 1, date: "2023-08-11T16:00:00Z", result: "0:7", identifier: 2 },
       { home: 'Arminia Bielefeld', homeLeague: 3, away: 'VfL Bochum', awayLeague: 1, date: "2023-08-12T16:00:00Z" },
       { home: 'Eintracht Braunschweig', homeLeague: 2, away: 'FC Schalke 04', awayLeague: 2, date: "2023-08-11T18:45:00Z" }
     ]
