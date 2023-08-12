@@ -139,7 +139,7 @@ export default function DFBPokal_2023_24() {
   const data: Data = {
     '1. Hauptrunde': [
       { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SV Darmstadt 98', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
-      { home: 'Hallescher FC', homeLeague: 3, away: 'SpVgg Greuther Fürth', awayLeague: 2, date: "2023-08-12T16:00:00Z" },
+      { home: 'Hallescher FC', homeLeague: 3, away: 'SpVgg Greuther Fürth', awayLeague: 2, date: "2023-08-12T16:00:00Z", result: "0:1", identifier: 2 },
       { home: 'SV Sandhausen', homeLeague: 3, away: 'Hannover 96', awayLeague: 2, date: "2023-08-11T16:00:00Z", result: "3:3 n.V. (3:3), 4:2 i.E.", identifier: 1 },
       { home: 'VfL Osnabrück', homeLeague: 2, away: '1. FC Köln', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
       { home: 'SV Atlas Delmenhorst', homeLeague: '5NI', away: 'FC St. Pauli', awayLeague: 2, date: "2023-08-12T13:30:00Z", result: "0:5", identifier: 2 },
@@ -156,7 +156,7 @@ export default function DFBPokal_2023_24() {
       { home: 'TSG Balingen', homeLeague: '4SW', away: 'VfB Stuttgart', awayLeague: 1, date: "2023-08-12T11:00:00Z", result: "0:4", identifier: 2 },
       { home: 'TSV Schott Mainz', homeLeague: '4SW', away: 'Borussia Dortmund', awayLeague: 1, date: "2023-08-12T13:30:00Z", result: "1:6", identifier: 2 },
       { home: 'Rot-Weiss Essen', homeLeague: 3, away: 'Hamburger SV', awayLeague: 2, date: "2023-08-13T11:00:00Z" },
-      { home: 'SV Elversberg', homeLeague: 2, away: '1. FSV Mainz 05', awayLeague: 1, date: "2023-08-12T16:00:00Z" },
+      { home: 'SV Elversberg', homeLeague: 2, away: '1. FSV Mainz 05', awayLeague: 1, date: "2023-08-12T16:00:00Z", result: "0:1", identifier: 2 },
       { home: '1. FC Lokomotive Leipzig', homeLeague: '4NO', away: 'SG Eintracht Frankfurt', awayLeague: 1, date: "2023-08-13T13:30:00Z" },
       { home: 'FC Astoria Walldorf', homeLeague: '4SW', away: '1. FC Union Berlin', awayLeague: 1, date: "2023-08-13T16:00:00Z" },
       { home: 'FC Viktoria Köln', homeLeague: 3, away: 'SV Werder Bremen', awayLeague: 1, date: "2023-08-12T13:30:00Z", result: "3:2", identifier: 1 },
@@ -168,7 +168,7 @@ export default function DFBPokal_2023_24() {
       { home: 'FC Gütersloh', homeLeague: '4W', away: 'Holstein Kiel', awayLeague: 2, date: "2023-08-12T13:30:00Z", result: "0:2", identifier: 2 },
       { home: 'SV Oberachern', homeLeague: '5BW', away: 'SC Freiburg', awayLeague: 1, date: "2023-08-13T13:30:00Z" },
       { home: 'TuS Bersenbrück', homeLeague: '5NI', away: 'Borussia Mönchengladbach', awayLeague: 1, date: "2023-08-11T16:00:00Z", result: "0:7", identifier: 2 },
-      { home: 'Arminia Bielefeld', homeLeague: 3, away: 'VfL Bochum', awayLeague: 1, date: "2023-08-12T16:00:00Z" },
+      { home: 'Arminia Bielefeld', homeLeague: 3, away: 'VfL Bochum', awayLeague: 1, date: "2023-08-12T16:00:00Z", result: "2:2 (2:2) n.V., 4:1 i.E.", identifier: 1 },
       { home: 'Eintracht Braunschweig', homeLeague: 2, away: 'FC Schalke 04', awayLeague: 2, date: "2023-08-11T18:45:00Z", result: "1:3", identifier: 2 }
     ]
   }
