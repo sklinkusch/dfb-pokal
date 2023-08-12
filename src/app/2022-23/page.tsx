@@ -8,6 +8,7 @@ type Match = {
   awayLeague: string | number
   result?: string
   identifier?: number
+  date?: string
 }
 
 type Data = { [key: string]: Match[] }
@@ -40,48 +41,72 @@ function Match({home, away, date, result, identifier}: MatchProps) {
 
 function Round({matches, title}: RoundProps) {
   const leagueIdentifiers = [
-    '5BW', '5HB', '5NI', '5NO', '5RS', 5, '4BY', '4N', '4NO', '4SW', '4W', 3, 2, 1
+    '5BW', '5HB', '5NI', '5NO', '5RS', '5', '4BY', '4N', '4NO', '4SW', '4W', '4', '3', '2', '1'
   ]
   const leagues: { [key: string]: string } = {
-    1: '1. Bundesliga',
-    2: '2. Bundesliga',
-    3: '3. Liga',
+    '1': '1. Bundesliga',
+    '2': '2. Bundesliga',
+    '3': '3. Liga',
+    '4': 'Regionalliga',
     '4BY': 'Regionalliga Bayern',
     '4N': 'Regionalliga Nord',
     '4NO': 'Regionalliga Nordost',
     '4SW': 'Regionalliga Südwest',
     '4W': 'Regionalliga West',
+    '5': 'Oberliga',
     '5BW': 'Oberliga Baden-Württemberg',
     '5HB': 'Oberliga Bremen',
     '5NI': 'Oberliga Niedersachsen',
     '5NO': 'Oberliga Nordost',
     '5RS': 'Oberliga Rheinland-Pfalz/Saar',
   }
+  const majorLeagueIdentifiers = leagueIdentifiers.filter(item => item.length === 1)
   return (
     <>
       <h2 className={styles.h2}>{title}</h2>
-      {leagueIdentifiers.map((hleague, idx: number) => {
-        return leagueIdentifiers.slice(idx).map(aleague => {
-          const hamatches = matches.filter(match => (`${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`) || (`${match.homeLeague}` === `${aleague}` && `${match.awayLeague}` === `${hleague}`))
-          const hindex = leagueIdentifiers.indexOf(hleague)
-          const aindex = leagueIdentifiers.indexOf(aleague)
-          const mindex = Math.min(hindex, aindex)
-          const pindex = Math.max(hindex, aindex)
-          const mkey = hindex === mindex ? hleague : aleague
-          const pkey = hindex === pindex ? hleague : aleague
-          const loname = hindex <= aindex ? leagues[hleague] : leagues[aleague]
-          const hiname = hindex > aindex ? leagues[hleague] : leagues[aleague]
-          if (hamatches.length > 0) {
-            return (
-              <div key={`${mkey}_${pkey}`}>
-                <h3 className={styles.h3}>{loname} – {hiname}</h3>
-                {hamatches.map((match, index) => {
-                  return (
-                    <Match home={match.home} away={match.away} result={match.result} identifier={match.identifier} key={`${mkey}_${pkey}_${index}`} />
-                  )})}
-              </div>
-            )
-          }
+      {majorLeagueIdentifiers.map((hmleague, idxh: number) => {
+        return majorLeagueIdentifiers.slice(idxh).map((amleague, idxa: number) => {
+          const hammatches = matches.filter(match => (`${match.homeLeague}`.startsWith(`${hmleague}`) && `${match.awayLeague}`.startsWith(`${amleague}`) || `${match.homeLeague}`.startsWith(`${amleague}`) && `${match.awayLeague}`.startsWith(`${hmleague}`)))
+          {return hammatches.length > 0 ? (
+            <div key={`${title}_${idxh}_${idxa}`}>
+              <h3 className={styles.h3}>{leagues[hmleague]} - {leagues[amleague]}</h3>
+              {leagueIdentifiers.map((hleague, idx: number) => {
+                return leagueIdentifiers.slice(idx).map(aleague => {
+                  const hamatches = hammatches.filter(match => (`${match.homeLeague}` === `${hleague}` && `${match.awayLeague}` === `${aleague}`) || (`${match.homeLeague}` === `${aleague}` && `${match.awayLeague}` === `${hleague}`)).sort((a,b) => {
+                    if (a.date && b.date) {
+                      return a.date < b.date ? -1 : a.date > b.date ? +1 : 0
+                    }
+                    return 0
+                  })
+                  const hindex = leagueIdentifiers.indexOf(hleague)
+                  const aindex = leagueIdentifiers.indexOf(aleague)
+                  const mindex = Math.min(hindex, aindex)
+                  const pindex = Math.max(hindex, mindex)
+                  const mkey = hindex === mindex ? hleague : aleague
+                  const pkey = hindex === pindex ? hleague : aleague
+                  const loname = hindex <= aindex ? leagues[hleague] : leagues[aleague]
+                  const hiname = hindex > aindex ? leagues[hleague] : leagues[aleague]
+                  if (hamatches.length > 0) {
+                    return (
+                      <div key={`${mkey}_${pkey}`}>
+                        {majorLeagueIdentifiers.includes(hleague) && majorLeagueIdentifiers.includes(aleague) ? null : <h4 className={styles.h4}>{loname} - {hiname}</h4>}
+                        {hamatches.map((match, index) => {
+                          if (match.date) {
+                            return (
+                              <Match home={match.home} away={match.away} result={match.result} identifier={match.identifier} date={match.date} key={`${mkey}_${pkey}_${index}`} />
+                            )
+                          }
+                          return (
+                              <Match home={match.home} away={match.away} result={match.result} identifier={match.identifier} key={`${mkey}_${pkey}_${index}`} />
+                            )
+                        })}
+                      </div>
+                    )
+                  }
+                })
+              })}
+            </div>
+          ) : (null)}
         })
       })}
     </>
