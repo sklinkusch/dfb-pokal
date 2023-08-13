@@ -124,7 +124,7 @@ export default function DFBPokal_2023_24() {
       { home: 'TSV Jahn Calden', homeLeague: '3S', away: '1. FFC Montabaur', awayLeague: '3SW', date: "2023-08-12T13:00:00Z", result: "7:0", identifier: 1 },
       { home: 'Rostocker FC', homeLeague: '4MV', away: 'Arminia Bielefeld', awayLeague: '3W', date: "2023-08-13T09:00:00Z", result: "1:13", identifier: 2 },
       { home: 'SV Henstedt-Ulzburg', homeLeague: '3N', away: 'Borussia Bocholt', awayLeague: '4NR', date: "2023-08-13T09:00:00Z", result: "7:0", identifier: 1 },
-      { home: 'ATS Buntentor', homeLeague: '3N', away: 'Hamburger SV', awayLeague: 2, date: "2023-08-13T11:00:00Z" },
+      { home: 'ATS Buntentor', homeLeague: '3N', away: 'Hamburger SV', awayLeague: 2, date: "2023-08-13T11:00:00Z", result: "1:4", identifier: 2 },
       { home: 'FC Viktoria 1889 Berlin', homeLeague: '3NO', away: 'TSV Barmke', awayLeague: '3N', date: "2023-08-13T12:00:00Z" },
       { home: 'SV Grün-Weiss Brieselang', homeLeague: '4BB', away: 'SFC Stern 1900', awayLeague: '4B', date: "2023-08-13T12:00:00Z" },
       { home: 'FC St. Pauli', homeLeague: '3N', away: 'Magdeburger FFC', awayLeague: '3NO', date: "2023-08-13T12:00:00Z" },
