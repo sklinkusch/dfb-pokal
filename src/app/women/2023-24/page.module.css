@@ -16,22 +16,7 @@
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
 }
-.flex {
-  display: flex;
-  flex-direction: row;
-}
-.flex > span {
-  flex: 0 0 15rem;
-  color: black;
-  font-weight: 400;
-}
-.flex > span:first-child {
-  margin-right: 2rem;
-}
-.winner {
-  color: blue !important;
-  font-weight: 700 !important;
-}
+
 .linkContainer {
   margin-top: 1.8rem;
   text-align: center;
