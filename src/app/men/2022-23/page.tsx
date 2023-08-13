@@ -1,33 +1,6 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 
-type Match = {
-  home: string
-  away: string
-  homeLeague: string | number
-  awayLeague: string | number
-  result?: string
-  identifier?: number
-  date?: string,
-  live?: boolean
-}
-
-type Data = { [key: string]: Match[] }
-
-type MatchProps = {
-  home: string
-  away: string
-  result?: string
-  date?: string
-  identifier?: number
-  live?: boolean
-}
-
-type RoundProps = {
-  matches: Match[]
-  title: string
-}
-
 function Match({home, away, date, result, identifier, live}: MatchProps) {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
   const formattedDate = date ? new Date(date).toLocaleString("de", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
