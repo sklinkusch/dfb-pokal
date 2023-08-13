@@ -8,7 +8,8 @@ type Match = {
   awayLeague: string | number
   result?: string
   identifier?: number
-  date?: string
+  date?: string,
+  live?: boolean
 }
 
 type Data = { [key: string]: Match[] }
@@ -19,6 +20,7 @@ type MatchProps = {
   result?: string
   date?: string
   identifier?: number
+  live?: boolean
 }
 
 type RoundProps = {
@@ -26,15 +28,15 @@ type RoundProps = {
   title: string
 }
 
-function Match({home, away, date, result, identifier}: MatchProps) {
+function Match({home, away, date, result, identifier, live}: MatchProps) {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
   const formattedDate = date ? new Date(date).toLocaleString("de", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
   return (
     <div className={styles.flex}>
       <span className={identifier === 1 ? styles.winner : undefined}>{home}</span>
       <span className={identifier === 2 ? styles.winner : undefined}>{away}</span>
-      <span>{result ? result : "–:–"}</span>
-      {result && <span>{formattedDate}</span>}
+      <span className={live ? styles.winner : undefined}>{result ? result : "–:–"}</span>
+      {formattedDate && <span>{formattedDate}</span>}
     </div>
   )
 }
