@@ -7,6 +7,16 @@
   margin-bottom: 1rem;
 }
 
+.h2 {
+  margin-bottom: 0.8rem;
+}
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
 .ul {
   list-style-position: inside;
 }
