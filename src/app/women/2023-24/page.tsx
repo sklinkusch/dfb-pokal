@@ -134,7 +134,7 @@ export default function DFBPokal_2023_24() {
       { home: 'Hegauer FV', homeLeague: '4BW', away: 'Chemnitzer FC', awayLeague: '4SN', date: "2023-08-13T12:00:00Z", result: "6:2", identifier: 1 },
       { home: 'FC Ingolstadt 04', homeLeague: '2', away: 'FC Carl Zeiss Jena', awayLeague: '2', date: "2023-08-13T12:00:00Z", result: "2:3", identifier: 2 },
       { home: 'SV Hegnach', homeLeague: '3S', away: 'SV Elversberg', awayLeague: '2', date: "2023-08-13T12:00:00Z", result: "1:0", identifier: 1 },
-      { home: 'FFC Wacker München', homeLeague: '3S', away: 'SV 67 Weinberg', awayLeague: '2', date: "2023-08-13T13:00:00Z" },
+      { home: 'FFC Wacker München', homeLeague: '3S', away: 'SV 67 Weinberg', awayLeague: '2', date: "2023-08-13T13:00:00Z", result: "0:4", identifier: 2 },
       { home: 'Holstein Kiel', homeLeague: '3N', away: 'Borussia Mönchengladbach', awayLeague: '2', date: "2023-08-15T16:30:00Z" }
     ]
   }
