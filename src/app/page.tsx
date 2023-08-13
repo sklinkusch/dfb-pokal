@@ -7,10 +7,10 @@ export default function Home() {
       <h1 className={styles.h1}>Liste von DFB-Pokal-Spielzeiten</h1>
       <ul className={styles.ul}>
         <li>
-          <Link href="/2023-24" className={styles.link}>Saison 2023/24</Link>
+          <Link href="/men/2023-24" className={styles.link}>Saison 2023/24</Link>
         </li>
         <li>
-          <Link href="/2022-23" className={styles.link}>Saison 2022/23</Link>
+          <Link href="/men/2022-23" className={styles.link}>Saison 2022/23</Link>
         </li>
       </ul>
     </main>
