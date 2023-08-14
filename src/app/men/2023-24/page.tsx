@@ -99,10 +99,10 @@ export default function DFBPokal_2023_24() {
   }
   const data: Data = {
     '1. Hauptrunde': [
-      { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SV Darmstadt 98', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
+      { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SV Darmstadt 98', awayLeague: 1, date: "2023-08-14T16:00:00Z", result: "3:0", identifier: 1 },
       { home: 'Hallescher FC', homeLeague: 3, away: 'SpVgg Greuther Fürth', awayLeague: 2, date: "2023-08-12T16:00:00Z", result: "0:1", identifier: 2 },
       { home: 'SV Sandhausen', homeLeague: 3, away: 'Hannover 96', awayLeague: 2, date: "2023-08-11T16:00:00Z", result: "3:3 (3:3) n.V., 4:2 i.E.", identifier: 1 },
-      { home: 'VfL Osnabrück', homeLeague: 2, away: '1. FC Köln', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
+      { home: 'VfL Osnabrück', homeLeague: 2, away: '1. FC Köln', awayLeague: 1, date: "2023-08-14T18:45:00Z" },
       { home: 'SV Atlas Delmenhorst', homeLeague: '5NI', away: 'FC St. Pauli', awayLeague: 2, date: "2023-08-12T13:30:00Z", result: "0:5", identifier: 2 },
       { home: 'FV Illertissen', homeLeague: '4BY', away: 'Fortuna Düsseldorf', awayLeague: 2, date: "2023-08-13T13:30:00Z", result: "1:3", identifier: 2 },
       { home: 'TuS Makkabi Berlin', homeLeague: '5NO', away: 'VfL Wolfsburg', awayLeague: 1, date: "2023-08-13T13:30:00Z", result: "0:6", identifier: 2 },
@@ -110,10 +110,10 @@ export default function DFBPokal_2023_24() {
       { home: 'SpVgg Unterhaching', homeLeague: 3, away: 'FC Augsburg', awayLeague: 1, date: "2023-08-13T13:30:00Z", result: "2:0", identifier: 1 },
       { home: 'Rostocker FC', homeLeague: '5NO', away: '1. FC Heidenheim', awayLeague: 1, date: "2023-08-13T11:00:00Z", result: "0:8", identifier: 2 },
       { home: 'Preußen Münster', homeLeague: 3, away: 'FC Bayern München', awayLeague: 1, date: "2023-09-26T18:45:00Z" },
-      { home: 'SSV Jahn Regensburg', homeLeague: 3, away: '1. FC Magdeburg', awayLeague: 2, date: "2023-08-14T16:00:00Z" },
+      { home: 'SSV Jahn Regensburg', homeLeague: 3, away: '1. FC Magdeburg', awayLeague: 2, date: "2023-08-14T16:00:00Z", result: "1:2", identifier: 2 },
       { home: 'FC Energie Cottbus', homeLeague: '4NO', away: 'SC Paderborn 07', awayLeague: 2, date: "2023-08-13T16:00:00Z", result: "0:7", identifier: 2 },
       { home: 'FC Oberneuland', homeLeague: '5HB', away: '1. FC Nürnberg', awayLeague: 2, date: "2023-08-12T13:30:00Z", result: "1:9", identifier: 2 },
-      { home: 'VfB Lübeck', homeLeague: 3, away: 'TSG 1899 Hoffenheim', awayLeague: 1, date: "2023-08-14T16:00:00Z" },
+      { home: 'VfB Lübeck', homeLeague: 3, away: 'TSG 1899 Hoffenheim', awayLeague: 1, date: "2023-08-14T16:00:00Z", result: "1:4", identifier: 2 },
       { home: 'TSG Balingen', homeLeague: '4SW', away: 'VfB Stuttgart', awayLeague: 1, date: "2023-08-12T11:00:00Z", result: "0:4", identifier: 2 },
       { home: 'TSV Schott Mainz', homeLeague: '4SW', away: 'Borussia Dortmund', awayLeague: 1, date: "2023-08-12T13:30:00Z", result: "1:6", identifier: 2 },
       { home: 'Rot-Weiss Essen', homeLeague: 3, away: 'Hamburger SV', awayLeague: 2, date: "2023-08-13T11:00:00Z", result: "3:4 (3:3) n.V.", identifier: 2 },
