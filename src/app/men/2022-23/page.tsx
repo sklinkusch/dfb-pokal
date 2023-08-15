@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Match from "@/components/Match"
-import styles from './page.module.css'
+import styles from '@/styles/index.module.css'
 
 function Round({matches, title}: RoundProps) {
   const leagueIdentifiers = [
