@@ -102,7 +102,7 @@ export default function DFBPokal_2023_24() {
       { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SV Darmstadt 98', awayLeague: 1, date: "2023-08-14T16:00:00Z", result: "3:0", identifier: 1 },
       { home: 'Hallescher FC', homeLeague: 3, away: 'SpVgg Greuther Fürth', awayLeague: 2, date: "2023-08-12T16:00:00Z", result: "0:1", identifier: 2 },
       { home: 'SV Sandhausen', homeLeague: 3, away: 'Hannover 96', awayLeague: 2, date: "2023-08-11T16:00:00Z", result: "3:3 (3:3) n.V., 4:2 i.E.", identifier: 1 },
-      { home: 'VfL Osnabrück', homeLeague: 2, away: '1. FC Köln', awayLeague: 1, date: "2023-08-14T18:45:00Z" },
+      { home: 'VfL Osnabrück', homeLeague: 2, away: '1. FC Köln', awayLeague: 1, date: "2023-08-14T18:45:00Z", result: "1:3 (1:1) n.V.", identifier: 2 },
       { home: 'SV Atlas Delmenhorst', homeLeague: '5NI', away: 'FC St. Pauli', awayLeague: 2, date: "2023-08-12T13:30:00Z", result: "0:5", identifier: 2 },
       { home: 'FV Illertissen', homeLeague: '4BY', away: 'Fortuna Düsseldorf', awayLeague: 2, date: "2023-08-13T13:30:00Z", result: "1:3", identifier: 2 },
       { home: 'TuS Makkabi Berlin', homeLeague: '5NO', away: 'VfL Wolfsburg', awayLeague: 1, date: "2023-08-13T13:30:00Z", result: "0:6", identifier: 2 },
