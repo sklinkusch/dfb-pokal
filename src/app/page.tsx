@@ -23,6 +23,9 @@ export default function Home() {
             <li>
               <Link href="/women/2023-24" className={styles.link}>Saison 2023/24</Link>
             </li>
+            <li>
+              <Link href="/women/2022-23" className={styles.link}>Saison 2022/23</Link>
+            </li>
           </ul>
         </div>
       </div>
