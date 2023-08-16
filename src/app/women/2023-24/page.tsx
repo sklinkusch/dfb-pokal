@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { RoundWomen as Round } from '@/components/Round'
+import Round from '@/components/Round'
 import styles from '@/styles/index.module.css'
 
 export default function DFBPokal_2023_24() {
@@ -33,7 +33,7 @@ export default function DFBPokal_2023_24() {
       {/* <Round matches={data.Viertelfinale} title="Viertelfinale" /> */}
       {/* <Round matches={data.Achtelfinale} title="Achtelfinale" /> */}
       {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" /> */}
-      <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" />
+      <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="f" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
       </div>
