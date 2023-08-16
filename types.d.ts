@@ -1,3 +1,5 @@
+type Indicator = "f" | "m"
+
 type Match = {
   home: string
   away: string
@@ -37,4 +39,5 @@ type MatchProps = {
 type RoundProps = {
   matches: Match[]
   title: string
+  type: "f" | "m"
 }
