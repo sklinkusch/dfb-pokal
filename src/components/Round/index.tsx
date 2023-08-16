@@ -60,7 +60,29 @@ function getLeagues (indicator: Indicator) {
         '5NR': 'Oberliga Niederrhein',
         '5RS': 'Oberliga Rheinland-Pfalz/Saar',
         '5SH': 'Oberliga Schleswig-Holstein',
-        '5WF': 'Oberliga Westfalen'
+        '5WF': 'Oberliga Westfalen',
+        '6': '6. Liga',
+        '6B': 'Berlin-Liga',
+        '6BB': 'Brandenburg-Liga',
+        '6BD': 'Verbandsliga Baden',
+        '6BY': 'Landesliga Bayern',
+        '6HB': 'Landesliga Bremen',
+        '6HE': 'Verbandsliga Hessen',
+        '6HH': 'Landesliga Hamburg',
+        '6MR': 'Landesliga Mittelrhein',
+        '6MV': 'Verbandsliga Mecklenburg-Vorpommern',
+        '6NI': 'Landesliga Niedersachsen',
+        '6NR': 'Landesliga Niederrhein',
+        '6RL': 'Rheinlandliga',
+        '6SA': 'Verbandsliga Sachsen-Anhalt',
+        '6SB': 'Verbandsliga Südbaden',
+        '6SH': 'Landesliga Schleswig-Holstein',
+        '6SL': 'Saarlandliga',
+        '6SN': 'Sachsenliga',
+        '6SW': 'Verbandsliga Südwest',
+        '6TH': 'Thüringenliga',
+        '6WB': 'Verbandsliga Württemberg',
+        '6WF': 'Westfalenliga'
       }
       break
   }
