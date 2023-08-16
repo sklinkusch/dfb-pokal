@@ -1,38 +1,74 @@
 import Match from '@/components/Match'
 import styles from '@/styles/index.module.css'
 
-export function RoundWomen({matches, title}: RoundProps) {
-  const leagues: { [key: string]: string } = {
-    '1': '1. Bundesliga',
-    '2': '2. Bundesliga',
-    '3': 'Regionalliga',
-    '3N': 'Regionalliga Nord',
-    '3NO': 'Regionalliga Nordost',
-    '3S': 'Regionalliga Süd',
-    '3SW': 'Regionalliga Südwest',
-    '3W': 'Regionalliga West',
-    '4': '4. Liga',
-    '4B': 'Verbandsliga Berlin',
-    '4BB': 'Verbandsliga Brandenburg',
-    '4BW': 'Oberliga Baden-Württemberg',
-    '4BY': 'Bayernliga',
-    '4HB': 'Verbandsliga Bremen',
-    '4HE': 'Hessenliga',
-    '4HH': 'Verbandsliga Hamburg',
-    '4MV': 'Verbandsliga Mecklenburg-Vorpommern',
-    '4MR': 'Verbandsliga Mittelrhein',
-    '4NIO': 'Niedersachsenliga Ost',
-    '4NIW': 'Niedersachsenliga West',
-    '4NR': 'Verbandsliga Niederrhein',
-    '4RL': 'Verbandsliga Rheinland',
-    '4SA': 'Verbandsliga Sachsen-Anhalt',
-    '4SH': 'Verbandsliga Schleswig-Holstein',
-    '4SL': 'Verbandsliga Saarland',
-    '4SN': 'Landesliga Sachsen',
-    '4SW': 'Verbandsliga Südwest',
-    '4TH': 'Verbandsliga Thüringen',
-    '4WF': 'Westfalenliga'
+function getLeagues (indicator: Indicator) {
+  let leagues: { [key: string]: string } = {}
+  switch (indicator) {
+    case "f":
+      leagues = {
+        '1': '1. Bundesliga',
+        '2': '2. Bundesliga',
+        '3': 'Regionalliga',
+        '3N': 'Regionalliga Nord',
+        '3NO': 'Regionalliga Nordost',
+        '3S': 'Regionalliga Süd',
+        '3SW': 'Regionalliga Südwest',
+        '3W': 'Regionalliga West',
+        '4': '4. Liga',
+        '4B': 'Verbandsliga Berlin',
+        '4BB': 'Verbandsliga Brandenburg',
+        '4BW': 'Oberliga Baden-Württemberg',
+        '4BY': 'Bayernliga',
+        '4HB': 'Verbandsliga Bremen',
+        '4HE': 'Hessenliga',
+        '4HH': 'Verbandsliga Hamburg',
+        '4MV': 'Verbandsliga Mecklenburg-Vorpommern',
+        '4MR': 'Verbandsliga Mittelrhein',
+        '4NIO': 'Niedersachsenliga Ost',
+        '4NIW': 'Niedersachsenliga West',
+        '4NR': 'Verbandsliga Niederrhein',
+        '4RL': 'Verbandsliga Rheinland',
+        '4SA': 'Verbandsliga Sachsen-Anhalt',
+        '4SH': 'Verbandsliga Schleswig-Holstein',
+        '4SL': 'Verbandsliga Saarland',
+        '4SN': 'Landesliga Sachsen',
+        '4SW': 'Verbandsliga Südwest',
+        '4TH': 'Verbandsliga Thüringen',
+        '4WF': 'Westfalenliga'
+      }
+      break
+    case "m":
+      leagues = {
+        '1': '1. Bundesliga',
+        '2': '2. Bundesliga',
+        '3': '3. Liga',
+        '4': 'Regionalliga',
+        '4BY': 'Regionalliga Bayern',
+        '4N': 'Regionalliga Nord',
+        '4NO': 'Regionalliga Nordost',
+        '4SW': 'Regionalliga Südwest',
+        '4W': 'Regionalliga West',
+        '5': 'Oberliga',
+        '5BW': 'Oberliga Baden-Württemberg',
+        '5BY': 'Bayernliga',
+        '5HB': 'Bremen-Liga',
+        '5HE': 'Hessenliga',
+        '5HH': 'Oberliga Hamburg',
+        '5MR': 'Mittelrheinliga',
+        '5NI': 'Oberliga Niedersachsen',
+        '5NO': 'Oberliga Nordost',
+        '5NR': 'Oberliga Niederrhein',
+        '5RS': 'Oberliga Rheinland-Pfalz/Saar',
+        '5SH': 'Oberliga Schleswig-Holstein',
+        '5WF': 'Oberliga Westfalen'
+      }
+      break
   }
+  return leagues
+}
+
+export default function Round({matches, title, type}: RoundProps) {
+  const leagues = getLeagues(type)
   const leagueIdentifiers = Object.keys(leagues).sort((a: string, b: string) => {
     if (Number(a.charAt(0)) > Number(b.charAt(0))) return -1
     if (Number(a.charAt(0)) < Number(b.charAt(0))) return +1
@@ -49,6 +85,7 @@ export function RoundWomen({matches, title}: RoundProps) {
   const leagueIdentifiersPerMajor = majorLeagueIdentifiers.reduce((acc: { [key: string]: string[]}, curr: string) => {
     acc[curr] = leagueIdentifiers.filter(identifier => {
       if (['1', '2'].includes(identifier) && identifier === curr) return true
+      if (identifier === '3' && identifier === curr && type === 'm') return true
       if (['1', '2'].includes(identifier) && identifier !== curr) return false
       return identifier.startsWith(curr) && identifier !== curr
     })
