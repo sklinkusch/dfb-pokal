@@ -10,7 +10,7 @@ export default function DFBPokal_2023_24() {
       { home: 'SV Meppen', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2023-09-10T14:00Z' },
       { home: '1. FFC Turbine Potsdam', homeLeague: '2', away: 'VfL Wolfsburg', awayLeague: '1', date: '2023-09-10T12:00Z' },
       { home: 'Arminia Bielefeld', homeLeague: '3W', away: 'MSV Duisburg', awayLeague: '1', date: '2023-09-09T14:00Z' },
-      { home: 'Borussia Mönchengladbach', homeLeague: '2', away: 'SV Werder Bremen', awayLeague: '1', date: '2023-09-09T13:30Z' },
+      { home: 'Borussia Mönchengladbach', homeLeague: '2', away: 'SV Werder Bremen', awayLeague: '1', date: '2023-09-09T13:30Z', result: '0:3', identifier: 2 },
       { home: 'SFC Stern 1900', homeLeague: '4B', away: '1. FC Köln', awayLeague: '1', date: '2023-09-09T11:00Z', result: '0:10', identifier: 2 },
       { home: 'VfL Bochum', homeLeague: '3W', away: 'SGS Essen', awayLeague: '1', date: '2023-09-09T11:00Z', result: '0:4', identifier: 2 },
       { home: 'FSV Gütersloh 2009', homeLeague: '2', away: 'RB Leipzig', awayLeague: '1', date: '2023-09-09T15:30Z' },
