@@ -14,7 +14,7 @@ export default function DFBPokal_2023_24() {
       { home: 'SFC Stern 1900', homeLeague: '4B', away: '1. FC Köln', awayLeague: '1', date: '2023-09-09T11:00Z', result: '0:10', identifier: 2 },
       { home: 'VfL Bochum', homeLeague: '3W', away: 'SGS Essen', awayLeague: '1', date: '2023-09-09T11:00Z', result: '0:4', identifier: 2 },
       { home: 'FSV Gütersloh 2009', homeLeague: '2', away: 'RB Leipzig', awayLeague: '1', date: '2023-09-09T15:30Z' },
-      { home: 'FC Viktoria 1889 Berlin', homeLeague: '3NO', away: 'SV Henstedt-Ulzburg', awayLeague: '3N', date: '2023-09-09T14:30Z' },
+      { home: 'FC Viktoria 1889 Berlin', homeLeague: '3NO', away: 'SV Henstedt-Ulzburg', awayLeague: '3N', date: '2023-09-09T14:30Z', result: '4:0', identifier: 1 },
       { home: 'FC St. Pauli', homeLeague: '3N', away: 'Hamburger SV', awayLeague: '2', date: '2023-09-08T16:30Z', result: '1:7', identifier: 2 },
       { home: 'FC Carl Zeiss Jena', homeLeague: '2', away: '1. FC Nürnberg', awayLeague: '1', date: '2023-09-09T12:00Z', result: '1:0', identifier: 1 },
       { home: 'SV 67 Weinberg', homeLeague: '2', away: 'TSG 1899 Hoffenheim', awayLeague: '1', date: '2023-09-09T13:00Z', result: '0:7', identifier: 2 },
