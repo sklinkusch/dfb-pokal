@@ -8,7 +8,7 @@ export default function DFBPokal_2023_24() {
   const data: Data = {
     '2. Hauptrunde': [
       { home: 'SV Meppen', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2023-09-10T14:00Z' },
-      { home: '1. FFC Turbine Potsdam', homeLeague: '2', away: 'VfL Wolfsburg', awayLeague: '1', date: '2023-09-10T12:00Z' },
+      { home: '1. FFC Turbine Potsdam', homeLeague: '2', away: 'VfL Wolfsburg', awayLeague: '1', date: '2023-09-10T12:00Z', result: '0:2', identifier: 2 },
       { home: 'Arminia Bielefeld', homeLeague: '3W', away: 'MSV Duisburg', awayLeague: '1', date: '2023-09-09T14:00Z', result: '1:6', identifier: 2 },
       { home: 'Borussia Mönchengladbach', homeLeague: '2', away: 'SV Werder Bremen', awayLeague: '1', date: '2023-09-09T13:30Z', result: '0:3', identifier: 2 },
       { home: 'SFC Stern 1900', homeLeague: '4B', away: '1. FC Köln', awayLeague: '1', date: '2023-09-09T11:00Z', result: '0:10', identifier: 2 },
@@ -18,11 +18,11 @@ export default function DFBPokal_2023_24() {
       { home: 'FC St. Pauli', homeLeague: '3N', away: 'Hamburger SV', awayLeague: '2', date: '2023-09-08T16:30Z', result: '1:7', identifier: 2 },
       { home: 'FC Carl Zeiss Jena', homeLeague: '2', away: '1. FC Nürnberg', awayLeague: '1', date: '2023-09-09T12:00Z', result: '1:0', identifier: 1 },
       { home: 'SV 67 Weinberg', homeLeague: '2', away: 'TSG 1899 Hoffenheim', awayLeague: '1', date: '2023-09-09T13:00Z', result: '0:7', identifier: 2 },
-      { home: 'SC Sand', homeLeague: '2', away: 'SC Freiburg', awayLeague: '1', date: '2023-09-10T12:00Z' },
-      { home: 'SG 99 Andernach', homeLeague: '2', away: 'FC Bayern München', awayLeague: '1', date: '2023-09-10T12:00Z' },
+      { home: 'SC Sand', homeLeague: '2', away: 'SC Freiburg', awayLeague: '1', date: '2023-09-10T12:00Z', result: '1:2', identifier: 2 },
+      { home: 'SG 99 Andernach', homeLeague: '2', away: 'FC Bayern München', awayLeague: '1', date: '2023-09-10T12:00Z', result: '0:2', identifier: 2 },
       { home: 'Hegauer FV', homeLeague: '4BW', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-09-13T16:30Z' },
       { home: '1. FSV Mainz 05', homeLeague: '3SW', away: 'TSV Jahn Calden', awayLeague: '3S', date: '2023-09-10T13:00Z' },
-      { home: 'Kickers Offenbach', homeLeague: '3S', away: 'SV Hegnach', awayLeague: '3S', date: '2023-09-10T12:00Z' }
+      { home: 'Kickers Offenbach', homeLeague: '3S', away: 'SV Hegnach', awayLeague: '3S', date: '2023-09-10T12:00Z', result: '3:0', identifier: 1 }
     ],
     '1. Hauptrunde': [
       { home: 'Karlsruher SC', homeLeague: '3S', away: 'SC Sand', awayLeague: '2', date: "2023-08-12T13:00:00Z", result: "0:4", identifier: 2 },
