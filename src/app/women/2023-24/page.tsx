@@ -7,7 +7,7 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     '2. Hauptrunde': [
-      { home: 'SV Meppen', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2023-09-10T14:00Z' },
+      { home: 'SV Meppen', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2023-09-10T14:00Z', result: '0:3', identifier: 2 },
       { home: '1. FFC Turbine Potsdam', homeLeague: '2', away: 'VfL Wolfsburg', awayLeague: '1', date: '2023-09-10T12:00Z', result: '0:2', identifier: 2 },
       { home: 'Arminia Bielefeld', homeLeague: '3W', away: 'MSV Duisburg', awayLeague: '1', date: '2023-09-09T14:00Z', result: '1:6', identifier: 2 },
       { home: 'Borussia Mönchengladbach', homeLeague: '2', away: 'SV Werder Bremen', awayLeague: '1', date: '2023-09-09T13:30Z', result: '0:3', identifier: 2 },
