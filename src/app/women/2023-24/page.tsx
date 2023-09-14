@@ -20,7 +20,7 @@ export default function DFBPokal_2023_24() {
       { home: 'SV 67 Weinberg', homeLeague: '2', away: 'TSG 1899 Hoffenheim', awayLeague: '1', date: '2023-09-09T13:00Z', result: '0:7', identifier: 2 },
       { home: 'SC Sand', homeLeague: '2', away: 'SC Freiburg', awayLeague: '1', date: '2023-09-10T12:00Z', result: '1:2', identifier: 2 },
       { home: 'SG 99 Andernach', homeLeague: '2', away: 'FC Bayern München', awayLeague: '1', date: '2023-09-10T12:00Z', result: '0:2', identifier: 2 },
-      { home: 'Hegauer FV', homeLeague: '4BW', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-09-13T16:30Z' },
+      { home: 'Hegauer FV', homeLeague: '4BW', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-09-13T16:30Z', result: '0:8', identifier: 2 },
       { home: '1. FSV Mainz 05', homeLeague: '3SW', away: 'TSV Jahn Calden', awayLeague: '3S', date: '2023-09-10T13:00Z', result: '3:0', identifier: 1 },
       { home: 'Kickers Offenbach', homeLeague: '3S', away: 'SV Hegnach', awayLeague: '3S', date: '2023-09-10T12:00Z', result: '3:0', identifier: 1 }
     ],
