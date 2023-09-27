@@ -17,7 +17,7 @@ export default function DFBPokal_2023_24() {
       { home: 'FC Rot-Weiß Koblenz', homeLeague: '5RS', away: '1. FC Kaiserslautern', awayLeague: '2', date: "2023-08-13T13:30:00Z", result: "0:5", identifier: 2 },
       { home: 'SpVgg Unterhaching', homeLeague: '3', away: 'FC Augsburg', awayLeague: '1', date: "2023-08-13T13:30:00Z", result: "2:0", identifier: 1 },
       { home: 'Rostocker FC', homeLeague: '5NO', away: '1. FC Heidenheim', awayLeague: '1', date: "2023-08-13T11:00:00Z", result: "0:8", identifier: 2 },
-      { home: 'Preußen Münster', homeLeague: '3', away: 'FC Bayern München', awayLeague: '1', date: "2023-09-26T18:45:00Z" },
+      { home: 'Preußen Münster', homeLeague: '3', away: 'FC Bayern München', awayLeague: '1', date: "2023-09-26T18:45:00Z", result: '0:4', identifier: 2 },
       { home: 'SSV Jahn Regensburg', homeLeague: '3', away: '1. FC Magdeburg', awayLeague: '2', date: "2023-08-14T16:00:00Z", result: "1:2", identifier: 2 },
       { home: 'FC Energie Cottbus', homeLeague: '4NO', away: 'SC Paderborn 07', awayLeague: '2', date: "2023-08-13T16:00:00Z", result: "0:7", identifier: 2 },
       { home: 'FC Oberneuland', homeLeague: '5HB', away: '1. FC Nürnberg', awayLeague: '2', date: "2023-08-12T13:30:00Z", result: "1:9", identifier: 2 },
