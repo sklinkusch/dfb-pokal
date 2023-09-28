@@ -30,7 +30,7 @@ export default function DFBPokal_2023_24() {
       { home: 'FC Astoria Walldorf', homeLeague: '4SW', away: '1. FC Union Berlin', awayLeague: '1', date: "2023-08-13T16:00:00Z", result: "0:4", identifier: 2 },
       { home: 'FC Viktoria Köln', homeLeague: '3', away: 'SV Werder Bremen', awayLeague: '1', date: "2023-08-12T13:30:00Z", result: "3:2", identifier: 1 },
       { home: 'FSV Frankfurt', homeLeague: '4SW', away: 'FC Hansa Rostock', awayLeague: '2', date: "2023-08-13T16:00:00Z", result: "1:1 (1:1) n.V., 0:3 i.E.", identifier: 2 },
-      { home: 'SV Wehen Wiesbaden', homeLeague: '2', away: 'RB Leipzig', awayLeague: '1', date: "2023-09-27T18:45:00Z" },
+      { home: 'SV Wehen Wiesbaden', homeLeague: '2', away: 'RB Leipzig', awayLeague: '1', date: "2023-09-27T18:45:00Z", result: '2:3', identifier: 2 },
       { home: 'FC Teutonia 05 Ottensen', homeLeague: '4N', away: 'TSV Bayer 04 Leverkusen', awayLeague: '1', date: "2023-08-12T13:30:00Z", result: "0:8", identifier: 2 },
       { home: 'FC Carl Zeiss Jena', homeLeague: '4NO', away: 'Hertha BSC Berlin', awayLeague: '2', date: "2023-08-12T11:00:00Z", result: "0:5", identifier: 2 },
       { home: '1. FC Saarbrücken', homeLeague: '3', away: 'Karlsruher SC', awayLeague: '2', date: "2023-08-11T16:00:00Z", result: "2:1", identifier: 1 },
