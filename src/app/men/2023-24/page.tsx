@@ -6,6 +6,24 @@ import styles from '@/styles/index.module.css'
 
 export default function DFBPokal_2023_24() {
   const data: Data = {
+    '2. Hauptrunde': [
+      { home: 'Viktoria Köln', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1' },
+      { home: 'Arminia Bielefeld', homeLeague: '3', away: 'Hamburger SV', awayLeague: '2' },
+      { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SpVgg Greuther Fürth', awayLeague: '2' },
+      { home: 'SpVgg Unterhaching', homeLeague: '3', away: 'Fortuna Düsseldorf', awayLeague: '2' },
+      { home: 'SV Sandhausen', homeLeague: '3', away: 'TSV Bayer 04 Leverkusen', awayLeague: '1' },
+      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'FC Bayern München', awayLeague: '1' },
+      { home: 'FC St. Pauli', homeLeague: '2', away: 'FC Schalke 04', awayLeague: '2' },
+      { home: '1. FC Nürnberg', homeLeague: '2', away: 'FC Hansa Rostock', awayLeague: '2' },
+      { home: 'Borussia Mönchengladbach', homeLeague: '1', away: '1. FC Heidenheim', awayLeague: '1' },
+      { home: 'Holstein Kiel', homeLeague: '2', away: '1. FC Magdeburg', awayLeague: '2' },
+      { home: 'SC Freiburg', homeLeague: '1', away: 'SC Paderborn 07', awayLeague: '2' },
+      { home: 'VfB Stuttgart', homeLeague: '1', away: '1. FC Union Berlin', awayLeague: '1' },
+      { home: 'Hertha BSC Berlin', homeLeague: '2', away: '1. FSV Mainz 05', awayLeague: '1' },
+      { home: 'Borussia Dortmund', homeLeague: '1', away: 'TSG 1899 Hoffenheim', awayLeague: '1' },
+      { home: 'VfL Wolfsburg', homeLeague: '1', away: 'RB Leipzig', awayLeague: '1' },
+      { home: '1. FC Kaiserslautern', homeLeague: '2', away: '1. FC Köln', awayLeague: '1' }
+    ],
     '1. Hauptrunde': [
       { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SV Darmstadt 98', awayLeague: '1', date: "2023-08-14T16:00:00Z", result: "3:0", identifier: 1 },
       { home: 'Hallescher FC', homeLeague: '3', away: 'SpVgg Greuther Fürth', awayLeague: '2', date: "2023-08-12T16:00:00Z", result: "0:1", identifier: 2 },
@@ -48,7 +66,7 @@ export default function DFBPokal_2023_24() {
       {/* <Round matches={data.Halbfinale} title="Halbfinale" /> */}
       {/* <Round matches={data.Viertelfinale} title="Viertelfinale" /> */}
       {/* <Round matches={data.Achtelfinale} title="Achtelfinale" /> */}
-      {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" /> */}
+      <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
