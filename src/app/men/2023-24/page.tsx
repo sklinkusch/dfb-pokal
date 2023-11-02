@@ -7,19 +7,19 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     '2. Hauptrunde': [
-      { home: 'Viktoria Köln', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-11-01T19:45Z' },
+      { home: 'Viktoria Köln', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-11-01T19:45Z', result: '0:2', identifier: 2 },
       { home: 'Arminia Bielefeld', homeLeague: '3', away: 'Hamburger SV', awayLeague: '2', date: '2023-10-31T19:45Z', result: '1:1 (1:1) n.V., 3:4 i.E.', identifier: 2 },
       { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'SpVgg Greuther Fürth', awayLeague: '2', date: '2023-10-31T17:00Z', result: '2:1', identifier: 1 },
       { home: 'SpVgg Unterhaching', homeLeague: '3', away: 'Fortuna Düsseldorf', awayLeague: '2', date: '2023-10-31T19:45Z', result: '3:6 (3:3) n.V.', identifier: 2 },
       { home: 'SV Sandhausen', homeLeague: '3', away: 'TSV Bayer 04 Leverkusen', awayLeague: '1', date: '2023-11-01T17:00Z', result: '2:5', identifier: 2 },
-      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'FC Bayern München', awayLeague: '1', date: '2023-11-01T19:45Z' },
+      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'FC Bayern München', awayLeague: '1', date: '2023-11-01T19:45Z', result: '2:1', identifier: 1 },
       { home: 'FC St. Pauli', homeLeague: '2', away: 'FC Schalke 04', awayLeague: '2', date: '2023-10-31T17:00Z', result: '2:1 (1:1) n.V.', identifier: 1 },
-      { home: '1. FC Nürnberg', homeLeague: '2', away: 'FC Hansa Rostock', awayLeague: '2', date: '2023-11-01T19:45Z' },
+      { home: '1. FC Nürnberg', homeLeague: '2', away: 'FC Hansa Rostock', awayLeague: '2', date: '2023-11-01T19:45Z', result: '3:2 (2:2) n.V.', identifier: 1 },
       { home: 'Borussia Mönchengladbach', homeLeague: '1', away: '1. FC Heidenheim', awayLeague: '1', date: '2023-10-31T19:45Z', result: '3:1', identifier: 1 },
       { home: 'Holstein Kiel', homeLeague: '2', away: '1. FC Magdeburg', awayLeague: '2', date: '2023-11-01T17:00Z', result: '3:3 (2:2) n.V., 3:4 i.E.', identifier: 2 },
       { home: 'SC Freiburg', homeLeague: '1', away: 'SC Paderborn 07', awayLeague: '2', date: '2023-11-01T17:00Z', result: '1:3', identifier: 2 },
       { home: 'VfB Stuttgart', homeLeague: '1', away: '1. FC Union Berlin', awayLeague: '1', date: '2023-10-31T17:00Z', result: '1:0', identifier: 1 },
-      { home: 'Hertha BSC Berlin', homeLeague: '2', away: '1. FSV Mainz 05', awayLeague: '1', date: '2023-11-01T19:45Z' },
+      { home: 'Hertha BSC Berlin', homeLeague: '2', away: '1. FSV Mainz 05', awayLeague: '1', date: '2023-11-01T19:45Z', result: '3:0', identifier: 1 },
       { home: 'Borussia Dortmund', homeLeague: '1', away: 'TSG 1899 Hoffenheim', awayLeague: '1', date: '2023-11-01T17:00Z', result: '1:0', identifier: 1 },
       { home: 'VfL Wolfsburg', homeLeague: '1', away: 'RB Leipzig', awayLeague: '1', date: '2023-10-31T17:00Z', result: '1:0', identifier: 1 },
       { home: '1. FC Kaiserslautern', homeLeague: '2', away: '1. FC Köln', awayLeague: '1', date: '2023-10-31T19:45Z', result: '3:2', identifier: 1 }
