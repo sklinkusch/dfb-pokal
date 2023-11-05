@@ -6,6 +6,16 @@ import styles from '@/styles/index.module.css'
 
 export default function DFBPokal_2023_24() {
   const data: Data = {
+    'Achtelfinale': [
+      { home: 'VfB Stuttgart', homeLeague: '1', away: 'Borussia Dortmund', awayLeague: '1' },
+      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1' },
+      { home: 'Borussia Mönchengladbach', homeLeague: '1', away: 'VfL Wolfsburg', awayLeague: '1' },
+      { home: 'Hertha BSC Berlin', homeLeague: '2', away: 'Hamburger SV', awayLeague: '2' },
+      { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'FC St. Pauli', awayLeague: '2' },
+      { home: 'TSV Bayer 04 Leverkusen', homeLeague: '1', away: 'SC Paderborn 07', awayLeague: '2' },
+      { home: '1. FC Kaiserslautern', homeLeague: '2', away: '1. FC Nürnberg', awayLeague: '2' },
+      { home: '1. FC Magdeburg', homeLeague: '2', away: 'Fortuna Düsseldorf', awayLeague: '2' }
+    ],
     '2. Hauptrunde': [
       { home: 'Viktoria Köln', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-11-01T19:45Z', result: '0:2', identifier: 2 },
       { home: 'Arminia Bielefeld', homeLeague: '3', away: 'Hamburger SV', awayLeague: '2', date: '2023-10-31T19:45Z', result: '1:1 (1:1) n.V., 3:4 i.E.', identifier: 2 },
@@ -65,7 +75,7 @@ export default function DFBPokal_2023_24() {
       {/* <Round matches={data.Finale} title="Finale" /> */}
       {/* <Round matches={data.Halbfinale} title="Halbfinale" /> */}
       {/* <Round matches={data.Viertelfinale} title="Viertelfinale" /> */}
-      {/* <Round matches={data.Achtelfinale} title="Achtelfinale" /> */}
+      <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" />
       <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
       <div className={styles.linkContainer}>
