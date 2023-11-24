@@ -7,14 +7,14 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     'Achtelfinale': [
-      { home: 'Hamburger SV', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1' },
-      { home: 'TSG 1899 Hoffenheim', homeLeague: '1', away: 'RB Leipzig', awayLeague: '1' },
-      { home: '1. FSV Mainz 05', homeLeague: '2SW', away: 'MSV Duisburg', awayLeague: '1' },
-      { home: 'SG Eintracht Frankfurt', homeLeague: '1', away: 'SC Freiburg', awayLeague: '1' },
-      { home: 'VfL Wolfsburg', homeLeague: '1', away: 'SV Werder Bremen', awayLeague: '1' },
-      { home: 'FC Viktoria 1889 Berlin', homeLeague: '3NO', away: 'FC Carl Zeiss Jena', awayLeague: '2' },
-      { home: 'SGS Essen', homeLeague: '1', away: '1. FC Köln', awayLeague: '1' },
-      { home: 'Kickers Offenbach', homeLeague: '3S', away: 'FC Bayern München', awayLeague: '1' }
+      { home: 'Hamburger SV', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2023-11-25T13:00Z' },
+      { home: 'TSG 1899 Hoffenheim', homeLeague: '1', away: 'RB Leipzig', awayLeague: '1', date: '2023-11-26T12:00Z' },
+      { home: '1. FSV Mainz 05', homeLeague: '2SW', away: 'MSV Duisburg', awayLeague: '1', date: '2023-11-26T14:00Z' },
+      { home: 'SG Eintracht Frankfurt', homeLeague: '1', away: 'SC Freiburg', awayLeague: '1', date: '2024-01-22T17:30Z' },
+      { home: 'VfL Wolfsburg', homeLeague: '1', away: 'SV Werder Bremen', awayLeague: '1', date: '2023-11-24T17:00Z' },
+      { home: 'FC Viktoria 1889 Berlin', homeLeague: '3NO', away: 'FC Carl Zeiss Jena', awayLeague: '2', date: '2023-11-25T13:00Z' },
+      { home: 'SGS Essen', homeLeague: '1', away: '1. FC Köln', awayLeague: '1', date: '2023-11-25T13:00Z' },
+      { home: 'Kickers Offenbach', homeLeague: '3S', away: 'FC Bayern München', awayLeague: '1', date: '2024-01-21T13:00Z' }
     ],
     '2. Hauptrunde': [
       { home: 'SV Meppen', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2023-09-10T14:00Z', result: '0:3', identifier: 2 },
