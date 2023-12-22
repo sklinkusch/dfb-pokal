@@ -6,6 +6,12 @@ import styles from '@/styles/index.module.css'
 
 export default function DFBPokal_2023_24() {
   const data: Data = {
+    'Viertelfinale': [
+      { home: 'FC St. Pauli', homeLeague: '2', away: 'Fortuna Düsseldorf', awayLeague: '2' },
+      { home: 'Hertha BSC Berlin', homeLeague: '2', away: '1. FC Kaiserslautern', awayLeague: '2' },
+      { home: 'TSV Bayer 04 Leverkusen', homeLeague: '1', away: 'VfB Stuttgart', awayLeague: '1' },
+      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'Borussia Mönchengladbach', awayLeague: '1' }
+    ],
     'Achtelfinale': [
       { home: 'VfB Stuttgart', homeLeague: '1', away: 'Borussia Dortmund', awayLeague: '1', date: '2023-12-06T19:45Z', result: '2:0', identifier: 1 },
       { home: '1. FC Saarbrücken', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-12-06T17:00Z', result: '2:0', identifier: 1 },
@@ -74,7 +80,7 @@ export default function DFBPokal_2023_24() {
       <h1 className={styles.h1}>DFB-Pokal 2023/24</h1>
       {/* <Round matches={data.Finale} title="Finale" /> */}
       {/* <Round matches={data.Halbfinale} title="Halbfinale" /> */}
-      {/* <Round matches={data.Viertelfinale} title="Viertelfinale" /> */}
+      <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" />
       <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" />
       <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
