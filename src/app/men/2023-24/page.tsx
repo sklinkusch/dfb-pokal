@@ -7,14 +7,14 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     'Achtelfinale': [
-      { home: 'VfB Stuttgart', homeLeague: '1', away: 'Borussia Dortmund', awayLeague: '1' },
-      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1' },
-      { home: 'Borussia Mönchengladbach', homeLeague: '1', away: 'VfL Wolfsburg', awayLeague: '1' },
-      { home: 'Hertha BSC Berlin', homeLeague: '2', away: 'Hamburger SV', awayLeague: '2' },
-      { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'FC St. Pauli', awayLeague: '2' },
-      { home: 'TSV Bayer 04 Leverkusen', homeLeague: '1', away: 'SC Paderborn 07', awayLeague: '2' },
-      { home: '1. FC Kaiserslautern', homeLeague: '2', away: '1. FC Nürnberg', awayLeague: '2' },
-      { home: '1. FC Magdeburg', homeLeague: '2', away: 'Fortuna Düsseldorf', awayLeague: '2' }
+      { home: 'VfB Stuttgart', homeLeague: '1', away: 'Borussia Dortmund', awayLeague: '1', date: '2023-12-06T19:45Z' },
+      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-12-06T17:00Z' },
+      { home: 'Borussia Mönchengladbach', homeLeague: '1', away: 'VfL Wolfsburg', awayLeague: '1', date: '2023-12-05T19:45Z' },
+      { home: 'Hertha BSC Berlin', homeLeague: '2', away: 'Hamburger SV', awayLeague: '2', date: '2023-12-06T19:45Z' },
+      { home: 'FC 08 Homburg', homeLeague: '4SW', away: 'FC St. Pauli', awayLeague: '2', date: '2023-12-05T19:45Z' },
+      { home: 'TSV Bayer 04 Leverkusen', homeLeague: '1', away: 'SC Paderborn 07', awayLeague: '2', date: '2023-12-06T17:00Z' },
+      { home: '1. FC Kaiserslautern', homeLeague: '2', away: '1. FC Nürnberg', awayLeague: '2', date: '2023-12-05T17:00Z' },
+      { home: '1. FC Magdeburg', homeLeague: '2', away: 'Fortuna Düsseldorf', awayLeague: '2', date: '2023-12-05T17:00Z' }
     ],
     '2. Hauptrunde': [
       { home: 'Viktoria Köln', homeLeague: '3', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2023-11-01T19:45Z', result: '0:2', identifier: 2 },
