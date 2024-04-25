@@ -6,6 +6,10 @@ import styles from '@/styles/index.module.css'
 
 export default function DFBPokal_2023_24() {
   const data: Data = {
+    'Halbfinale': [
+      { home: 'VfL Wolfsburg', homeLeague: '1', away: 'SGS Essen', awayLeague: '1', date: '2024-03-30T12:00Z', result: '9:0', identifier: 1 },
+      { home: 'FC Bayern München', homeLeague: '1', away: 'SG Eintracht Frankfurt', awayLeague: '1', date: '2024-03-31T13:45Z', result: '1:1 (1:1) n.V., 3:1 i.E.', identifier: 1 }
+    ],
     'Viertelfinale': [
       { home: 'TSG 1899 Hoffenheim', homeLeague: '1', away: 'VfL Wolfsburg', awayLeague: '1', date: '2024-03-05T17:30Z', result: '0:3', identifier: 2 },
       { home: 'FC Carl Zeiss Jena', homeLeague: '2', away: 'FC Bayern München', awayLeague: '1', date: '2024-03-05T17:30Z', result: '0:3', identifier: 2 },
@@ -63,7 +67,7 @@ export default function DFBPokal_2023_24() {
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2023/24</h1>
       {/* <Round matches={data.Finale} title="Finale" /> */}
-      {/* <Round matches={data.Halbfinale} title="Halbfinale" /> */}
+      <Round matches={data.Halbfinale} title="Halbfinale" type="f" />
       <Round matches={data.Viertelfinale} title="Viertelfinale" type="f" />
       <Round matches={data.Achtelfinale} title="Achtelfinale" type="f" />
       <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type='f' />
