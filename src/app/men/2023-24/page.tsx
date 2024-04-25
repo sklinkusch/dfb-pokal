@@ -6,6 +6,9 @@ import styles from '@/styles/index.module.css'
 
 export default function DFBPokal_2023_24() {
   const data: Data = {
+    'Finale': [
+      { home: '1. FC Kaiserslautern', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2024-05-25T18:00Z' }
+    ],
     'Halbfinale': [
       { home: '1. FC Saarbrücken', homeLeague: '3', away: '1. FC Kaiserslautern', awayLeague: '2', date: '2024-04-02T18:45Z', result: '0:2', identifier: 2 },
       { home: 'Bayer 04 Leverkusen', homeLeague: '1', away: 'Fortuna Düsseldorf', awayLeague: '2', date: '2024-04-03T18:45Z', result: '4:0', identifier: 1 }
@@ -82,7 +85,7 @@ export default function DFBPokal_2023_24() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2023/24</h1>
-      {/* <Round matches={data.Finale} title="Finale" /> */}
+      <Round matches={data.Finale} title="Finale" type="m" />
       <Round matches={data.Halbfinale} title="Halbfinale" type="m" />
       <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" />
       <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" />
