@@ -7,10 +7,10 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     'Viertelfinale': [
-      { home: 'FC St. Pauli', homeLeague: '2', away: 'Fortuna Düsseldorf', awayLeague: '2', date: '2024-01-30T19:45Z' },
-      { home: 'Hertha BSC Berlin', homeLeague: '2', away: '1. FC Kaiserslautern', awayLeague: '2', date: '2024-01-31T19:45Z' },
-      { home: 'TSV Bayer 04 Leverkusen', homeLeague: '1', away: 'VfB Stuttgart', awayLeague: '1', date: '2024-02-06T19:45Z' },
-      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'Borussia Mönchengladbach', awayLeague: '1', date: '2024-02-07T19:45Z' }
+      { home: 'FC St. Pauli', homeLeague: '2', away: 'Fortuna Düsseldorf', awayLeague: '2', date: '2024-01-30T19:45Z', result: '2:2 (1:1) n.V., 3:4 i.E.', identifier: 2 },
+      { home: 'Hertha BSC Berlin', homeLeague: '2', away: '1. FC Kaiserslautern', awayLeague: '2', date: '2024-01-31T19:45Z', result: '1:3', identifier: 2 },
+      { home: 'TSV Bayer 04 Leverkusen', homeLeague: '1', away: 'VfB Stuttgart', awayLeague: '1', date: '2024-02-06T19:45Z', result: '3:2', identifier: 1 },
+      { home: '1. FC Saarbrücken', homeLeague: '3', away: 'Borussia Mönchengladbach', awayLeague: '1', date: '2024-03-12T19:30Z', result: '2:1', identifier: 1 }
     ],
     'Achtelfinale': [
       { home: 'VfB Stuttgart', homeLeague: '1', away: 'Borussia Dortmund', awayLeague: '1', date: '2023-12-06T19:45Z', result: '2:0', identifier: 1 },
