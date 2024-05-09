@@ -7,7 +7,7 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     'Finale': [
-      { home: 'FC Bayern München', homeLeague: '1', away: 'VfL Wolfsburg', awayLeague: '1', date: '2024-05-09T14:00Z' }
+      { home: 'FC Bayern München', homeLeague: '1', away: 'VfL Wolfsburg', awayLeague: '1', date: '2024-05-09T14:00Z', result: '0:2', identifier: 2 }
     ],
     'Halbfinale': [
       { home: 'VfL Wolfsburg', homeLeague: '1', away: 'SGS Essen', awayLeague: '1', date: '2024-03-30T12:00Z', result: '9:0', identifier: 1 },
