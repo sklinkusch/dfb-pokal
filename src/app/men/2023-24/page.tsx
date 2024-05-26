@@ -7,7 +7,7 @@ import styles from '@/styles/index.module.css'
 export default function DFBPokal_2023_24() {
   const data: Data = {
     'Finale': [
-      { home: '1. FC Kaiserslautern', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2024-05-25T18:00Z' }
+      { home: '1. FC Kaiserslautern', homeLeague: '2', away: 'Bayer 04 Leverkusen', awayLeague: '1', date: '2024-05-25T18:00Z', result: '0:1', identifier: 2 }
     ],
     'Halbfinale': [
       { home: '1. FC Saarbrücken', homeLeague: '3', away: '1. FC Kaiserslautern', awayLeague: '2', date: '2024-04-02T18:45Z', result: '0:2', identifier: 2 },
