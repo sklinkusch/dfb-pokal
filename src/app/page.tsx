@@ -10,6 +10,9 @@ export default function Home() {
           <h2 className={styles.h2}>Männer</h2>
           <ul className={styles.ul}>
             <li>
+              <Link href="/men/2024-25" className={styles.link}>Saison 2024/25</Link>
+            </li>
+            <li>
               <Link href="/men/2023-24" className={styles.link}>Saison 2023/24</Link>
             </li>
             <li>
