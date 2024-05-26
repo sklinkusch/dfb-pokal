@@ -41,3 +41,10 @@ type RoundProps = {
   title: string
   type: "f" | "m"
 }
+
+type Team = {
+  name: string
+  league: string
+}
+
+type Teams = { [key: string]: Team }
