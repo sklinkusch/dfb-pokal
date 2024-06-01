@@ -90,6 +90,7 @@ function getLeagues (indicator: Indicator) {
 }
 
 export default function Round({matches, title, type}: RoundProps) {
+  const realMatches: Match[] = matches.filter((match): match is Match => Boolean(match));
   const leagues = getLeagues(type)
   const leagueIdentifiers = Object.keys(leagues).sort((a: string, b: string) => {
     if (Number(a.charAt(0)) > Number(b.charAt(0))) return -1
@@ -119,12 +120,12 @@ export default function Round({matches, title, type}: RoundProps) {
       obj['home'] = hcurr
       obj['away'] = acurr
       if (hcurr === acurr) {
-        obj['matches'] = matches.filter(match => match.homeLeague.startsWith(hcurr) && match.awayLeague.startsWith(acurr))
+        obj['matches'] = realMatches.filter(match => match.homeLeague.startsWith(hcurr) && match.awayLeague.startsWith(acurr))
         obj['num'] = obj['matches'].length
         aacc.push(obj)
       } else {
-        const matchA = matches.filter(match => match.homeLeague.startsWith(hcurr) && match.awayLeague.startsWith(acurr))
-        const matchB = matches.filter(match => match.homeLeague.startsWith(acurr) && match.awayLeague.startsWith(hcurr))
+        const matchA = realMatches.filter(match => match.homeLeague.startsWith(hcurr) && match.awayLeague.startsWith(acurr))
+        const matchB = realMatches.filter(match => match.homeLeague.startsWith(acurr) && match.awayLeague.startsWith(hcurr))
         obj['matches'] = [ ...matchA, ...matchB ]
         obj['num'] = matchA.length + matchB.length
         aacc.push(obj)
@@ -139,12 +140,12 @@ export default function Round({matches, title, type}: RoundProps) {
       obj['home'] = hcurr
       obj['away'] = acurr
       if (hcurr === acurr) {
-        obj['matches'] = matches.filter(match => match.homeLeague === hcurr && match.awayLeague === acurr)
+        obj['matches'] = realMatches.filter(match => match.homeLeague === hcurr && match.awayLeague === acurr)
         obj['num'] = obj['matches'].length
         aacc.push(obj)
       } else {
-        const matchA = matches.filter(match => match.homeLeague === hcurr && match.awayLeague === acurr)
-        const matchB = matches.filter(match => match.homeLeague === acurr && match.awayLeague === hcurr)
+        const matchA = realMatches.filter(match => match.homeLeague === hcurr && match.awayLeague === acurr)
+        const matchB = realMatches.filter(match => match.homeLeague === acurr && match.awayLeague === hcurr)
         obj['matches'] = [ ...matchA, ...matchB ]
         obj['num'] = matchA.length + matchB.length
         aacc.push(obj)
