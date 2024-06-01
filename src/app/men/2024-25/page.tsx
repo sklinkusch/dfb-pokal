@@ -20,8 +20,9 @@ export default function DFBPokal_2024_25() {
     M05: '1. FSV Mainz 05',
     MGL: 'Borussia Mönchengladbach',
     FCU: '1. FC Union Berlin',
+    BOC: 'VfL Bochum',
     STP: 'FC St. Pauli',
-    DÜS: 'Fortuna Düsseldorf'
+    KIE: 'Holstein Kiel',
   };
   const Liga1 = Object.keys(l1teams).reduce((acc: Teams, team) => {
     const obj = { ...acc };
@@ -29,9 +30,9 @@ export default function DFBPokal_2024_25() {
     return obj;
   }, {});
   const l2teams: { [key: string ]: string } = {
-    BOC: 'VfL Bochum',
     KÖL: '1. FC Köln',
     D98: 'SV Darmstadt 98',
+    DÜS: 'Fortuna Düsseldorf',
     HSV: 'Hamburger SV',
     KSC: 'Karlsruher SC',
     H96: 'Hannover 96',
@@ -44,9 +45,9 @@ export default function DFBPokal_2024_25() {
     FCK: '1. FC Kaiserslautern',
     FCM: '1. FC Magdeburg',
     EBS: 'Eintracht Braunschweig',
-    WIE: 'SV Wehen Wiesbaden',
     ULM: 'SSV Ulm 1846',
-    PMS: 'Preußen Münster'
+    PMS: 'Preußen Münster',
+    JRE: 'SSV Jahn Regensburg'
   };
   const Liga2 = Object.keys(l2teams).reduce((acc: Teams, team) => {
     const obj = { ...acc };
@@ -56,7 +57,7 @@ export default function DFBPokal_2024_25() {
   const l3teams: { [key: string ]: string } = {
     ROS: 'FC Hansa Rostock',
     OSN: 'VfL Osnabrück',
-    JRE: 'SSV Jahn Regensburg',
+    WIE: 'SV Wehen Wiesbaden',
     DRE: 'Dynamo Dresden',
     SVS: 'SV Samdhausen',
     FCI: 'FC Ingolstadt 04',
@@ -102,15 +103,21 @@ export default function DFBPokal_2024_25() {
     return obj;
   }, {});
   const teams: Teams = { ...Liga1, ...Liga2, ...Liga3, ...Liga4, ...Liga5 };
-  const getTeam = (short: string, id: string ) => {
-    const obj: { [key: string ]: string } = {};
-    const nameIdentifier: 'home' | 'away' = id === 'h' ? 'home' : 'away';
-    obj[nameIdentifier] = teams[short].name;
-    const leagueIdentifier: 'homeLeague' | 'awayLeague' = id === 'h' ? 'homeLeague' : 'awayLeague';
-    obj[leagueIdentifier] = teams[short].league;
-    return obj;
+  const getMatch = (shortHome: string, shortAway: string, date?: string, result?: string, identifier?: 1 | 2, live?: boolean) => {
+    if (teams.hasOwnProperty(shortHome) && teams.hasOwnProperty(shortAway)) {
+      const homeTeam = teams[shortHome];
+      const awayTeam = teams[shortAway];
+      const resultObject: Match = { home: homeTeam.name, homeLeague: homeTeam.league, away: awayTeam.name, awayLeague: awayTeam.league };
+      if (date) resultObject.date = date;
+      if (result) resultObject.result = result;
+      if (identifier) resultObject.identifier = identifier;
+      if (live) resultObject.live = live;
+      return resultObject;
+    }
   }
-  const data: Data = {};
+  const data: Data = {
+    '1. Hauptrunde': []
+  };
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2024/25</h1>
@@ -119,7 +126,7 @@ export default function DFBPokal_2024_25() {
       {/* <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" /> */}
       {/* <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" /> */}
       {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" /> */}
-      {/* <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" /> */}
+      <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
       </div>
