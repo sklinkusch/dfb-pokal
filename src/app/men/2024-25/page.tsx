@@ -59,7 +59,7 @@ export default function DFBPokal_2024_25() {
     OSN: 'VfL Osnabrück',
     WIE: 'SV Wehen Wiesbaden',
     DRE: 'Dynamo Dresden',
-    SVS: 'SV Samdhausen',
+    SVS: 'SV Sandhausen',
     FCI: 'FC Ingolstadt 04',
     WÜR: 'Würzburger Kickers',
     ECB: 'FC Energie Cottbus',
@@ -84,7 +84,8 @@ export default function DFBPokal_2024_25() {
     HFC: ['Hallescher FC', 'NO'],
     PLB: ['1. FC Phönix Lübeck', 'N'],
     VIL: ['FC 08 Villingen', 'SW'],
-    CZJ: ['FC Carl Zeiss Jena', 'NO']
+    CZJ: ['FC Carl Zeiss Jena', 'NO'],
+    LOT: ['Sportfreunde Lotte', 'W']
   };
   const Liga4 = Object.keys(l4teams).reduce((acc: Teams, team) => {
     const obj = { ...acc };
@@ -116,7 +117,40 @@ export default function DFBPokal_2024_25() {
     }
   }
   const data: Data = {
-    '1. Hauptrunde': []
+    '1. Hauptrunde': [
+      getMatch('DRE', 'DÜS'),
+      getMatch('BIE', 'H96'),
+      getMatch('JRE', 'BOC'),
+      getMatch('PMS', 'VfB'),
+      getMatch('EBS', 'SGE'),
+      getMatch('AUE', 'MGL'),
+      getMatch('LOT', 'KSC'),
+      getMatch('BSV', 'P07'),
+      getMatch('SVM', 'HSV'),
+      getMatch('WÜR', 'HOF'),
+      getMatch('PLB', 'BVB'),
+      getMatch('HIL', 'SVE'),
+      getMatch('VIL', 'FCH'),
+      getMatch('FCS', 'FCN'),
+      getMatch('ECB', 'SVW'),
+      getMatch('KOB', 'WOB'),
+      getMatch('RWE', 'RBL'),
+      getMatch('WIE', 'M05'),
+      getMatch('FCI', 'FCK'),
+      getMatch('SVS', 'KÖL'),
+      getMatch('ULM', 'FCB'),
+      getMatch('KOF', 'FCM'),
+      getMatch('CZJ', 'B04'),
+      getMatch('AAL', 'S04'),
+      getMatch('ROS', 'BSC'),
+      getMatch('HFC', 'STP'),
+      getMatch('OSN', 'SCF'),
+      getMatch('GFC', 'FCU'),
+      getMatch('SMZ', 'SGF'),
+      getMatch('OTT', 'D98'),
+      getMatch('VBL', 'FCA'),
+      getMatch('AAC', 'KIE')
+    ]
   };
   return (
     <main className={styles.main}>
