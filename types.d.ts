@@ -25,7 +25,7 @@ type ListObject = {
   matches: Match[]
 }
 
-type Data = { [key: string]: Match[] }
+type Data = { [key: string]: (Match | undefined)[] }
 
 type MatchProps = {
   home: string
@@ -37,7 +37,7 @@ type MatchProps = {
 }
 
 type RoundProps = {
-  matches: Match[]
+  matches: (Match | undefined)[]
   title: string
   type: "f" | "m"
 }
