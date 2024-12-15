@@ -118,38 +118,72 @@ export default function DFBPokal_2024_25() {
   }
   const data: Data = {
     '1. Hauptrunde': [
-      getMatch('WÜR', 'HOF', '2024-08-16T16:00Z'),
-      getMatch('WIE', 'M05', '2024-08-16T16:00Z'),
-      getMatch('HFC', 'STP', '2024-08-16T16:00Z'),
-      getMatch('ULM', 'FCB', '2024-08-16T18:45Z'),
-      getMatch('AUE', 'MGL', '2024-08-17T11:00Z'),
-      getMatch('SMZ', 'SGF', '2024-08-17T11:00Z'),
-      getMatch('VIL', 'FCH', '2024-08-17T13:30Z'),
-      getMatch('RWE', 'RBL', '2024-08-17T13:30Z'),
-      getMatch('FCI', 'FCK', '2024-08-17T13:30Z'),
-      getMatch('AAL', 'S04', '2024-08-17T13:30Z'),
-      getMatch('OSN', 'SCF', '2024-08-17T13:30Z'),
-      getMatch('GFC', 'FCU', '2024-08-17T13:30Z'),
-      getMatch('BIE', 'H96', '2024-08-17T16:00Z'),
-      getMatch('AAC', 'KIE', '2024-08-17T16:00Z'),
-      getMatch('PLB', 'BVB', '2024-08-17T16:00Z'),
-      getMatch('FCS', 'FCN', '2024-08-18T11:00Z'),
-      getMatch('VBL', 'FCA', '2024-08-18T11:00Z'),
-      getMatch('BSV', 'P07', '2024-08-18T13:30Z'),
-      getMatch('HIL', 'SVE', '2024-08-18T13:30Z'),
-      getMatch('JRE', 'BOC', '2024-08-18T13:30Z'),
-      getMatch('SVS', 'KÖL', '2024-08-18T13:30Z'),
-      getMatch('ROS', 'BSC', '2024-08-18T13:30Z'),
-      getMatch('OTT', 'D98', '2024-08-18T13:30Z'),
-      getMatch('DRE', 'DÜS', '2024-08-18T16:00Z'),
-      getMatch('LOT', 'KSC', '2024-08-18T16:00Z'),
-      getMatch('SVM', 'HSV', '2024-08-18T16:00Z'),
-      getMatch('ECB', 'SVW', '2024-08-19T16:00Z'),
-      getMatch('KOB', 'WOB', '2024-08-19T16:00Z'),
-      getMatch('KOF', 'FCM', '2024-08-19T16:00Z'),
-      getMatch('EBS', 'SGE', '2024-08-19T18:45Z'),
-      getMatch('PMS', 'VfB', '2024-08-27T18:45Z'),
-      getMatch('CZJ', 'B04', '2024-08-28T16:00Z')
+      getMatch('WÜR', 'HOF', '2024-08-16T16:00Z', '1:1, 2:2 n.V., 3:5 i.E.', 2),
+      getMatch('WIE', 'M05', '2024-08-16T16:00Z', '1:1, 1:3 n.V.', 2),
+      getMatch('HFC', 'STP', '2024-08-16T16:00Z', '2:2, 2:3 n.V.', 2),
+      getMatch('ULM', 'FCB', '2024-08-16T18:45Z', '0:4', 2),
+      getMatch('AUE', 'MGL', '2024-08-17T11:00Z', '1:3', 2),
+      getMatch('SMZ', 'SGF', '2024-08-17T11:00Z', '0:2', 2),
+      getMatch('VIL', 'FCH', '2024-08-17T13:30Z', '0:4', 2),
+      getMatch('RWE', 'RBL', '2024-08-17T13:30Z', '1:4', 2),
+      getMatch('FCI', 'FCK', '2024-08-17T13:30Z', '1:2', 2),
+      getMatch('AAL', 'S04', '2024-08-17T13:30Z', '0:2', 2),
+      getMatch('OSN', 'SCF', '2024-08-17T13:30Z', '0:4', 2),
+      getMatch('GFC', 'FCU', '2024-08-17T13:30Z', '0:1', 2),
+      getMatch('BIE', 'H96', '2024-08-17T16:00Z', '2:0', 1),
+      getMatch('AAC', 'KIE', '2024-08-17T16:00Z', '2:3', 2),
+      getMatch('PLB', 'BVB', '2024-08-17T16:00Z', '1:4', 2),
+      getMatch('FCS', 'FCN', '2024-08-18T11:00Z', '1:1, 1:1 n.V., 3:5 i.E.', 2),
+      getMatch('VBL', 'FCA', '2024-08-18T11:00Z', '1:4', 2),
+      getMatch('BSV', 'P07', '2024-08-18T13:30Z', '0:4', 2),
+      getMatch('HIL', 'SVE', '2024-08-18T13:30Z', '0:7', 2),
+      getMatch('JRE', 'BOC', '2024-08-18T13:30Z', '1:0', 1),
+      getMatch('SVS', 'KÖL', '2024-08-18T13:30Z', '2:2, 2:3 n.V.', 2),
+      getMatch('ROS', 'BSC', '2024-08-18T13:30Z', '1:5', 2),
+      getMatch('OTT', 'D98', '2024-08-18T13:30Z', '1:3', 2),
+      getMatch('DRE', 'DÜS', '2024-08-18T16:00Z', '2:0', 1),
+      getMatch('LOT', 'KSC', '2024-08-18T16:00Z', '0:5', 2),
+      getMatch('SVM', 'HSV', '2024-08-18T16:00Z', '1:7', 2),
+      getMatch('ECB', 'SVW', '2024-08-19T16:00Z', '1:3', 2),
+      getMatch('KOB', 'WOB', '2024-08-19T16:00Z', '0:1', 2),
+      getMatch('KOF', 'FCM', '2024-08-19T16:00Z', '2:1', 1),
+      getMatch('EBS', 'SGE', '2024-08-19T18:45Z', '1:4', 2),
+      getMatch('PMS', 'VfB', '2024-08-27T18:45Z', '0:5', 2),
+      getMatch('CZJ', 'B04', '2024-08-28T16:00Z', '0:1', 2)
+    ],
+    '2. Hauptrunde': [
+      getMatch('B04', 'SVE', '2024-10-29T17:00Z', '3:0', 1),
+      getMatch('KOF', 'KSC', '2024-10-29T17:00Z', '0:2', 2),
+      getMatch('FCA', 'S04', '2024-10-29T17:00Z', '3:0', 1),
+      getMatch('RBL', 'STP', '2024-10-29T17:00Z', '4:2', 1),
+      getMatch('VfB', 'FCK', '2024-10-29T19:45Z', '2:1', 1),
+      getMatch('KÖL', 'KIE', '2024-10-29T19:45Z', '3:0', 1),
+      getMatch('WOB', 'BVB', '2024-10-29T19:45Z', '0:0, 1:0 n.V.', 1),
+      getMatch('JRE', 'SGF', '2024-10-29T19:45Z', '1:0', 1),
+      getMatch('SCF', 'HSV', '2024-10-30T17:00Z', '2:1', 1),
+      getMatch('BSC', 'FCH', '2024-10-30T17:00Z', '2:1', 1),
+      getMatch('SGE', 'MGL', '2024-10-30T17:00Z', '2:1', 1),
+      getMatch('P07', 'SVW', '2024-10-30T17:00Z', '0:1', 2),
+      getMatch('BIE', 'FCU', '2024-10-30T19:45Z', '2:0', 1),
+      getMatch('DRE', 'D98', '2024-10-30T19:45Z', '2:2, 2:3 n.V.', 2),
+      getMatch('HOF', 'FCN', '2024-10-30T19:45Z', '2:1', 1),
+      getMatch('M05', 'FCB', '2024-10-30T19:45Z', '0:4', 2)
+    ],
+    'Achtelfinale': [
+      getMatch('BIE', 'SCF', '2024-12-03T17:00Z', '3:1', 1),
+      getMatch('JRE', 'VfB', '2024-12-03T17:00Z', '0:3', 2),
+      getMatch('FCB', 'B04', '2024-12-03T19:45Z', '0:1', 2),
+      getMatch('SVW', 'D98', '2024-12-03T19:45Z', '1:0', 1),
+      getMatch('KÖL', 'BSC', '2024-12-04T17:00Z', '1:1, 2:1 n.V.', 1),
+      getMatch('WOB', 'HOF', '2024-12-04T17:00Z', '3:0', 1),
+      getMatch('RBL', 'SGE', '2024-12-04T19:45Z', '3:0', 1),
+      getMatch('KSC', 'FCA', '2024-12-04T19:45Z', '1:1, 2:2 n.V., 4:5 i.E.', 2)
+    ],
+    'Viertelfinale': [
+      getMatch('RBL', 'WOB'),
+      getMatch('BIE', 'SVW'),
+      getMatch('VfB', 'FCA'),
+      getMatch('B04', 'KÖL')
     ]
   };
   return (
@@ -157,9 +191,9 @@ export default function DFBPokal_2024_25() {
       <h1 className={styles.h1}>DFB-Pokal 2024/25</h1>
       {/* <Round matches={data.Finale} title="Finale" type="m" /> */}
       {/* <Round matches={data.Halbfinale} title="Halbfinale" type="m" /> */}
-      {/* <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" /> */}
-      {/* <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" /> */}
-      {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" /> */}
+      <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" />
+      <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" />
+      <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
