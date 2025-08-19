@@ -180,17 +180,24 @@ export default function DFBPokal_2024_25() {
       getMatch('KSC', 'FCA', '2024-12-04T19:45Z', '1:1, 2:2 n.V., 4:5 i.E.', 2)
     ],
     'Viertelfinale': [
-      getMatch('RBL', 'WOB'),
-      getMatch('BIE', 'SVW'),
-      getMatch('VfB', 'FCA'),
-      getMatch('B04', 'KÖL')
+      getMatch('VfB', 'FCA', '2025-02-04T19:45Z', '1:0', 1),
+      getMatch('B04', 'KÖL', '2025-02-05T19:45Z', '2:2, 3:2 n.V', 1),
+      getMatch('BIE', 'SVW', '2025-02-25T19:45Z', '2:1', 1),
+      getMatch('RBL', 'WOB', '2025-02-26T19:45Z', '1:0', 1),
+    ],
+    'Halbfinale': [
+      getMatch('BIE', 'B04', '2025-04-01T18:45Z', '2:1', 1),
+      getMatch('VfB', 'RBL', '2025-04-02T18:45Z', '3:1', 1),
+    ],
+    'Finale': [
+      getMatch('BIE', 'VfB', '2025-05-24T18:00Z', '2:4', 2)
     ]
   };
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2024/25</h1>
-      {/* <Round matches={data.Finale} title="Finale" type="m" /> */}
-      {/* <Round matches={data.Halbfinale} title="Halbfinale" type="m" /> */}
+      <Round matches={data.Finale} title="Finale" type="m" />
+      <Round matches={data.Halbfinale} title="Halbfinale" type="m" />
       <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" />
       <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" />
       <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
