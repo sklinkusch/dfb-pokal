@@ -148,7 +148,7 @@ export default function DFBPokal_2024_25() {
       getMatch('SWF', 'DÜS', '2025-08-18T16:00Z', '2:4', 2),
       getMatch('PMS', 'BSC', '2025-08-18T16:00Z', '0:0 n.V., 3:5 i.E.', 2),
       getMatch('RWE', 'BVB', '2025-08-18T18:45Z', '0:1', 2),
-      getMatch('EBS', 'VfB', '2025-08-26T18:45Z'),
+      getMatch('EBS', 'VfB', '2025-08-26T18:45Z', '3:3, 4:4 n.V., 7:8 i.E.', 2),
       getMatch('WIE', 'FCB', '2025-08-27T18:45Z'),
     ]
   };
