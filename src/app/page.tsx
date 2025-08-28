@@ -27,6 +27,9 @@ export default function Home() {
           <h2 className={styles.h2}>Frauen</h2>
           <ul className={styles.ul}>
             <li>
+              <Link href="/women/2025-26" className={styles.link}>Saison 2025/26</Link>
+            </li>
+            <li>
               <Link href="/women/2024-25" className={styles.link}>Saison 2024/25</Link>
             </li>
             <li>
