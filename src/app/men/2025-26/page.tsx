@@ -117,6 +117,24 @@ export default function DFBPokal_2024_25() {
     }
   }
   const data: Data = {
+    '2. Hauptrunde': [
+      getMatch('ILL', 'FCM'),
+      getMatch('ECB', 'RBL'),
+      getMatch('FCU', 'BIE'),
+      getMatch('FCH', 'HSV'),
+      getMatch('MGL', 'KSC'),
+      getMatch('BSC', 'SVE'),
+      getMatch('SGF', 'FCK'),
+      getMatch('SGE', 'BVB'),
+      getMatch('D98', 'S04'),
+      getMatch('FCA', 'BOC'),
+      getMatch('DÜS', 'SCF'),
+      getMatch('P07', 'B04'),
+      getMatch('M05', 'VfB'),
+      getMatch('WOB', 'KIE'),
+      getMatch('KÖL', 'FCB'),
+      getMatch('STP', 'HOF'),
+    ],
     '1. Hauptrunde': [
       getMatch('FCS', 'FCM', '2025-08-15T16:00Z', '1:3', 2),
       getMatch('GTL', 'FCU', '2025-08-15T16:00Z', '0:5', 2),
@@ -159,7 +177,7 @@ export default function DFBPokal_2024_25() {
       {/* <Round matches={data.Halbfinale} title="Halbfinale" type="m" /> */}
       {/* <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" /> */}
       {/* <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" /> */}
-      {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" /> */}
+      <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.link}>Zur Hauptseite</Link>
