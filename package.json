@@ -18,7 +18,7 @@
     "@emotion/react": "^11.11.1",
     "@types/node": "20.11.20",
     "@types/react": "18.2.60",
-    "@types/react-dom": "18.2.19",
+    "@types/react-dom": "19.2.2",
     "concurrently": "^9.2.1",
     "eslint": "8.57.0",
     "eslint-config-next": "13.4.6",
