@@ -102,6 +102,16 @@ export default function DFBPokal_2025_26() {
     }
   }
   const data: Data = {
+    'Achtelfinale': [
+      getMatch('POT', 'ESS', '2025-11-15T12:00Z'),
+      getMatch('FCU', 'CZJ', '2025-11-15T13:00Z'),
+      getMatch('WOB', 'SCF', '2025-11-15T15:30Z'),
+      getMatch('SAN', 'KÖL', '2025-11-16T12:00Z'),
+      getMatch('FCI', 'FCB', '2025-11-16T13:00Z'),
+      getMatch('HOF', 'SGE', '2025-11-16T13:00Z'),
+      getMatch('HSV', 'B04', '2025-11-16T14:00Z'),
+      getMatch('RBL', 'SVW', '2025-11-16T15:00Z'),
+    ],
     '1. Hauptrunde': [
       getMatch('BUN', 'WOB', '2025-09-27T11:00Z', '0:11', 2),
       getMatch('MON', 'POT', '2025-09-27T13:00Z', '0:3', 2),
@@ -145,8 +155,7 @@ export default function DFBPokal_2025_26() {
       {/* <Round matches={data.Finale} title="Finale" type="f" /> */}
       {/* <Round matches={data.Halbfinale} title="Halbfinale" type="f" /> */}
       {/* <Round matches={data.Viertelfinale} title="Viertelfinale" type="f" /> */}
-      {/* <Round matches={data.Achtelfinale} title="Achtelfinale" type="f" /> */}
-      {/* <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type='f' /> */}
+      <Round matches={data.Achtelfinale} title="Achtelfinale" type="f" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="f" />
       <Round matches={data['Playoffs']} title="Playoffs" type="f" />
       <div className={styles.linkContainer}>
