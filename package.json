@@ -17,7 +17,7 @@
   "devDependencies": {
     "@emotion/react": "^11.14.0",
     "@types/next": "^9.0.0",
-    "@types/node": "24.9.2",
+    "@types/node": "24.10.1",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "concurrently": "^9.2.1",
