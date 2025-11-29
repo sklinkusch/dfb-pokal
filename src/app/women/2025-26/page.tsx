@@ -103,14 +103,14 @@ export default function DFBPokal_2025_26() {
   }
   const data: Data = {
     'Achtelfinale': [
-      getMatch('POT', 'ESS', '2025-11-15T12:00Z'),
-      getMatch('FCU', 'CZJ', '2025-11-15T13:00Z'),
-      getMatch('WOB', 'SCF', '2025-11-15T15:30Z'),
-      getMatch('SAN', 'KÖL', '2025-11-16T12:00Z'),
-      getMatch('FCI', 'FCB', '2025-11-16T13:00Z'),
-      getMatch('HOF', 'SGE', '2025-11-16T13:00Z'),
-      getMatch('HSV', 'B04', '2025-11-16T14:00Z'),
-      getMatch('RBL', 'SVW', '2025-11-16T15:00Z'),
+      getMatch('FCU', 'CZJ', '2025-11-15T13:00Z', '0:1', 2),
+      getMatch('WOB', 'SCF', '2025-11-15T15:30Z', '3:1', 1),
+      getMatch('POT', 'ESS', '2025-11-16T12:00Z', '0:1', 2),
+      getMatch('SAN', 'KÖL', '2025-11-16T12:00Z', '3:2', 1),
+      getMatch('FCI', 'FCB', '2025-11-16T13:00Z', '0:3', 2),
+      getMatch('HOF', 'SGE', '2025-11-16T13:00Z', '4:6', 2),
+      getMatch('HSV', 'B04', '2025-11-16T14:00Z', '1:1, 1:1 n.V., 4:2 i.E.', 1),
+      getMatch('RBL', 'SVW', '2025-11-16T15:00Z', '1:1, 1:1 n.V., 4:5 i.E.', 2),
     ],
     '1. Hauptrunde': [
       getMatch('BUN', 'WOB', '2025-09-27T11:00Z', '0:11', 2),
