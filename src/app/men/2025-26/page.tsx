@@ -118,14 +118,14 @@ export default function DFBPokal_2024_25() {
   }
   const data: Data = {
     'Achtelfinale': [
-      getMatch('BVB', 'B04'),
-      getMatch('HSV', 'KIE'),
-      getMatch('FCU', 'FCB'),
-      getMatch('BOC', 'VfB'),
-      getMatch('BSC', 'FCK'),
-      getMatch('SCF', 'D98'),
-      getMatch('MGL', 'STP'),
-      getMatch('RBL', 'FCM'),
+      getMatch('MGL', 'STP', '2025-12-02T17:00Z'),
+      getMatch('BSC', 'FCK', '2025-12-02T17:00Z'),
+      getMatch('RBL', 'FCM', '2025-12-02T20:00Z'),
+      getMatch('BVB', 'B04', '2025-12-02T20:00Z'),
+      getMatch('BOC', 'VfB', '2025-12-03T17:00Z'),
+      getMatch('SCF', 'D98', '2025-12-03T17:00Z'),
+      getMatch('HSV', 'KIE', '2025-12-03T19:45Z'),
+      getMatch('FCU', 'FCB', '2025-12-03T19:45Z'),
     ],
     '2. Hauptrunde': [
       getMatch('SGE', 'BVB', '2025-10-28T17:30Z', '1:1, 1:1 n.V., 2:4 i.E.', 2),
