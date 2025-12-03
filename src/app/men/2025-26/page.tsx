@@ -120,8 +120,8 @@ export default function DFBPokal_2024_25() {
     'Achtelfinale': [
       getMatch('MGL', 'STP', '2025-12-02T17:00Z', '1:2', 2),
       getMatch('BSC', 'FCK', '2025-12-02T17:00Z', '6:1', 1),
-      getMatch('RBL', 'FCM', '2025-12-02T20:00Z'),
-      getMatch('BVB', 'B04', '2025-12-02T20:00Z'),
+      getMatch('RBL', 'FCM', '2025-12-02T20:00Z', '3:1', 1),
+      getMatch('BVB', 'B04', '2025-12-02T20:00Z', '0:1', 2),
       getMatch('BOC', 'VfB', '2025-12-03T17:00Z'),
       getMatch('SCF', 'D98', '2025-12-03T17:00Z'),
       getMatch('HSV', 'KIE', '2025-12-03T19:45Z'),
