@@ -22,8 +22,8 @@
     "@types/react-dom": "19.2.2",
     "concurrently": "^9.2.1",
     "eslint": "9.39.0",
-    "eslint-config-next": "16.0.1",
-    "next": "16.0.1",
+    "eslint-config-next": "16.0.7",
+    "next": "16.0.7",
     "theme-ui": "^0.17.2",
     "typescript": "5.9.3"
   }
