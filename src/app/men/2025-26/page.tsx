@@ -124,8 +124,8 @@ export default function DFBPokal_2024_25() {
       getMatch('BVB', 'B04', '2025-12-02T20:00Z', '0:1', 2),
       getMatch('BOC', 'VfB', '2025-12-03T17:00Z', '0:2', 2),
       getMatch('SCF', 'D98', '2025-12-03T17:00Z', '2:0', 1),
-      getMatch('HSV', 'KIE', '2025-12-03T19:45Z'),
-      getMatch('FCU', 'FCB', '2025-12-03T19:45Z'),
+      getMatch('HSV', 'KIE', '2025-12-03T19:45Z', '0:0, 1:1 n.V., 2:4 i.E.', 2),
+      getMatch('FCU', 'FCB', '2025-12-03T19:45Z', '2:3', 2),
     ],
     '2. Hauptrunde': [
       getMatch('SGE', 'BVB', '2025-10-28T17:30Z', '1:1, 1:1 n.V., 2:4 i.E.', 2),
