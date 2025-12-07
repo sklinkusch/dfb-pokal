@@ -117,6 +117,12 @@ export default function DFBPokal_2024_25() {
     }
   }
   const data: Data = {
+    'Viertelfinale': [
+      getMatch('FCB', 'RBL'),
+      getMatch('BSC', 'SCF'),
+      getMatch('KIE', 'VfB'),
+      getMatch('B04', 'STP'),
+    ],
     'Achtelfinale': [
       getMatch('MGL', 'STP', '2025-12-02T17:00Z', '1:2', 2),
       getMatch('BSC', 'FCK', '2025-12-02T17:00Z', '6:1', 1),
@@ -185,7 +191,7 @@ export default function DFBPokal_2024_25() {
       <h1 className={styles.h1}>DFB-Pokal 2025/26</h1>
       {/* <Round matches={data.Finale} title="Finale" type="m" /> */}
       {/* <Round matches={data.Halbfinale} title="Halbfinale" type="m" /> */}
-      {/* <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" /> */}
+      <Round matches={data.Viertelfinale} title="Viertelfinale" type="m" />
       <Round matches={data.Achtelfinale} title="Achtelfinale" type="m" />
       <Round matches={data['2. Hauptrunde']} title="2. Hauptrunde" type="m" />
       <Round matches={data['1. Hauptrunde']} title="1. Hauptrunde" type="m" />
