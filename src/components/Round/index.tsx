@@ -186,42 +186,45 @@ export default function Round({matches, title, type}: RoundProps) {
     },[])
     return hacc.concat(minorAMatches)
   },[])
-  return (
-    <>
-      <h2 className={styles.h2}>{title}</h2>
-      {majorMatches.map((majorListObject: ListObject, idx: number) => {
-        return majorListObject.num > 0 ? (
-          <div key={`${title}_major_${idx}`}>
-            <h3 className={styles.h3}>{leagues[majorListObject.home]} - {leagues[majorListObject.away]}</h3>
-            {minorMatches.filter((minorObject: ListObject) => {
-              const A1 = leagueIdentifiersPerMajor[majorListObject.home].includes(minorObject.home)
-              const A2 = leagueIdentifiersPerMajor[majorListObject.away].includes(minorObject.away)
-              const B1 = leagueIdentifiersPerMajor[majorListObject.home].includes(minorObject.away)
-              const B2 = leagueIdentifiersPerMajor[majorListObject.away].includes(minorObject.home)
-              const A = A1 && A2
-              const B = B1 && B2 
-              return A || B
-            }).map((minorObject: ListObject, idy: number) => {
-              return minorObject.num > 0 ? (
-                <div key={`${title}_minor_${idy}`}>
-                  {(minorObject.home !== majorListObject.home || minorObject.away !== majorListObject.away) && <h4>{leagues[minorObject.home]} - {leagues[minorObject.away]}</h4>}
-                  {minorObject.matches.sort((a:Match, b: Match) => {
-                    if (a.date && b.date) {
-                      if (a.date < b.date) return -1
-                      if (a.date > b.date) return +1
+  if (matches.length > 0) {
+    return (
+      <>
+        <h2 className={styles.h2}>{title}</h2>
+        {majorMatches.map((majorListObject: ListObject, idx: number) => {
+          return majorListObject.num > 0 ? (
+            <div key={`${title}_major_${idx}`}>
+              <h3 className={styles.h3}>{leagues[majorListObject.home]} - {leagues[majorListObject.away]}</h3>
+              {minorMatches.filter((minorObject: ListObject) => {
+                const A1 = leagueIdentifiersPerMajor[majorListObject.home].includes(minorObject.home)
+                const A2 = leagueIdentifiersPerMajor[majorListObject.away].includes(minorObject.away)
+                const B1 = leagueIdentifiersPerMajor[majorListObject.home].includes(minorObject.away)
+                const B2 = leagueIdentifiersPerMajor[majorListObject.away].includes(minorObject.home)
+                const A = A1 && A2
+                const B = B1 && B2 
+                return A || B
+              }).map((minorObject: ListObject, idy: number) => {
+                return minorObject.num > 0 ? (
+                  <div key={`${title}_minor_${idy}`}>
+                    {(minorObject.home !== majorListObject.home || minorObject.away !== majorListObject.away) && <h4>{leagues[minorObject.home]} - {leagues[minorObject.away]}</h4>}
+                    {minorObject.matches.sort((a:Match, b: Match) => {
+                      if (a.date && b.date) {
+                        if (a.date < b.date) return -1
+                        if (a.date > b.date) return +1
+                        return 0
+                      }
                       return 0
-                    }
-                    return 0
-                  }).map((match: Match, ind: number) => {
-                    const { home, away, date, result, identifier, live } = match
-                    return <Match key={ind} home={home} away={away} date={date} result={result} identifier={identifier} live={live} />
-                  })}
-                </div>
-              ) : null
-            })}
-          </div>
-        ) : null
-      })}
-    </>
-  )
+                    }).map((match: Match, ind: number) => {
+                      const { home, away, date, result, identifier, live } = match
+                      return <Match key={ind} home={home} away={away} date={date} result={result} identifier={identifier} live={live} />
+                    })}
+                  </div>
+                ) : null
+              })}
+            </div>
+          ) : null
+        })}
+      </>
+    )
+  }
+  return (<></>)
 }
