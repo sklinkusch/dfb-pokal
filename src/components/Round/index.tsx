@@ -186,7 +186,7 @@ export default function Round({matches, title, type}: RoundProps) {
     },[])
     return hacc.concat(minorAMatches)
   },[])
-  if (matches.length > 0) {
+  if (Array.isArray(matches) && matches.length > 0) {
     return (
       <>
         <h2 className={styles.h2}>{title}</h2>
