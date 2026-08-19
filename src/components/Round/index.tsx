@@ -122,7 +122,7 @@ function getLeagues (indicator: Indicator) {
 }
 
 export default function Round({matches, title, type}: RoundProps) {
-  const realMatches: Match[] = matches.filter((match): match is Match => Boolean(match));
+  const realMatches: Match[] = matches && Array.isArray(matches) ? matches.filter((match): match is Match => Boolean(match)) : [];
   const leagues = getLeagues(type)
   const leagueIdentifiers = Object.keys(leagues).sort((a: string, b: string) => {
     if (Number(a.charAt(0)) > Number(b.charAt(0))) return -1
