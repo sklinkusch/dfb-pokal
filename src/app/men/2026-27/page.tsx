@@ -118,9 +118,9 @@ export default function DFBPokal_2024_25() {
   }
   const data: Data = {
     '1. Hauptrunde': [
-      getMatch('STT', 'SGE', '2026-08-21T16:00Z'),
-      getMatch('WMA', 'FCK', '2026-08-21T16:00Z'),
-      getMatch('PMS', 'KSC', '2026-08-21T16:00Z'),
+      getMatch('STT', 'SGE', '2026-08-21T16:00Z', '0:11', 2),
+      getMatch('WMA', 'FCK', '2026-08-21T16:00Z', '0:0, 0:1 n.V.', 2),
+      getMatch('PMS', 'KSC', '2026-08-21T16:00Z', '1:2', 2),
       getMatch('ROS', 'VfB', '2026-08-21T18:45Z'),
       getMatch('WIE', 'B04', '2026-08-22T11:00Z'),
       getMatch('ECB', 'FCA', '2026-08-22T11:00Z'),
