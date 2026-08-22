@@ -121,7 +121,7 @@ export default function DFBPokal_2024_25() {
       getMatch('STT', 'SGE', '2026-08-21T16:00Z', '0:11', 2),
       getMatch('WMA', 'FCK', '2026-08-21T16:00Z', '0:0, 0:1 n.V.', 2),
       getMatch('PMS', 'KSC', '2026-08-21T16:00Z', '1:2', 2),
-      getMatch('ROS', 'VfB', '2026-08-21T18:45Z'),
+      getMatch('ROS', 'VfB', '2026-08-21T18:45Z', '0:4', 2),
       getMatch('WIE', 'B04', '2026-08-22T11:00Z'),
       getMatch('ECB', 'FCA', '2026-08-22T11:00Z'),
       getMatch('AUE', 'HOF', '2026-08-22T13:30Z'),
