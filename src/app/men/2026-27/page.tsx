@@ -149,7 +149,7 @@ export default function DFBPokal_2024_25() {
       getMatch('SCV', 'HSV', '2026-08-24T16:00Z', '0:3', 2),
       getMatch('HFC', 'S04', '2026-08-24T18:45Z', '2:2, 2:5 n.V.', 2),
       getMatch('HEB', 'BVB', '2026-09-01T18:45Z', '0:5', 2),
-      getMatch('OSN', 'FCB', '2026-09-02T18:45Z'),
+      getMatch('OSN', 'FCB', '2026-09-02T18:45Z', '1:4', 2),
     ]
   };
   return (
