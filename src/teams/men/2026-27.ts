@@ -1,0 +1,85 @@
+import { createLeagueTeams } from "@/functions/createLeagueTeams";
+
+const l1teams: { [key: string ]: string } = {
+    FCB: 'FC Bayern München',
+    BVB: 'Borussia Dortmund',
+    RBL: 'RB Leipzig',
+    VfB: 'VfB Stuttgart',
+    HOF: 'TSG 1899 Hoffenheim',
+    B04: 'Bayer 04 Leverkusen',
+    SCF: 'SC Freiburg',
+    SGE: 'SG Eintracht Frankfurt',
+    FCA: 'FC Augsburg',
+    M05: '1. FSV Mainz 05',
+    FCU: '1. FC Union Berlin',
+    MGL: 'Borussia Mönchengladbach',
+    HSV: 'Hamburger SV',
+    KÖL: '1. FC Köln',
+    SVW: 'SV Werder Bremen',
+    S04: 'FC Schalke 04',
+    SVE: 'SV Elversberg',
+    P07: 'SC Paderborn 07',
+  };
+  const l2teams: { [key: string ]: string } = {
+    WOB: 'VfL Wolfsburg',
+    STP: 'FC St. Pauli',
+    FCH: '1. FC Heidenheim',
+    H96: 'Hannover 96',
+    D98: 'SV Darmstadt 98',
+    FCK: '1. FC Kaiserslautern',
+    BSC: 'Hertha BSC',
+    FCN: '1. FC Nürnberg',
+    BOC: 'VfL Bochum',
+    KSC: 'Karlsruher SC',
+    DRE: 'Dynamo Dresden',
+    KIE: 'Holstein Kiel',
+    BIE: 'Arminia Bielefeld',
+    FCM: '1. FC Magdeburg',
+    EBS: 'Eintracht Braunschweig',
+    SGF: 'SpVgg Greuther Fürth',
+    OSN: 'VfL Osnabrück',
+    ECB: 'FC Energie Cottbus',
+  };
+  const l3teams: { [key: string ]: string } = {
+    DÜS: 'Fortuna Düsseldorf',
+    PMS: 'Preußen Münster',
+    RWE: 'Rot-Weiss Essen',
+    MSV: 'MSV Duisburg',
+    WMA: 'SV Waldhof Mannheim',
+    WIE: 'SV Wehen Wiesbaden',
+    WÜR: 'Würzburger Kickers',
+    ROS: 'FC Hansa Rostock',
+    VKL: 'Viktoria Köln',
+    FCS: '1. FC Saarbrücken',
+    SCV: 'SC Verl',
+    GAS: 'SG Sonnenhof Großaspach',
+  };
+  const l4teams: { [ key: string ]: [string, string] } = {
+    MÜN: ['TSV 1860 München', 'BY'],
+    AGL: ['VSG Altglienicke', 'NO'],
+    JED: ['SSV Jeddeloh II', 'N'],
+    TRI: ['Eintracht Trier', 'SW'],
+    AUE: ['FC Erzgebirge Aue', 'NO'],
+    HFC: ['Hallescher FC', 'NO'],
+    PHL: ['1. FC Phönix Lübeck', 'N'],
+    CZJ: ['FC Carl Zeiss Jena', 'NO'],
+    RHY: ['Westfalia Rhynern', 'W'],
+  };
+  const l5teams: { [key: string]: [string, string] } = {
+    KRI: ['VfB Krieschow', 'NO'],
+    HEM: ['SV Hemelingen', 'HB'],
+    HEB: ['Hamburg-Eimsbütteler Ballspiel-Club', 'HH'],
+    STT: ['SC St. Tönis 11/20', 'NR'],
+    LÜN: ['Lüneburger SK Hansa', 'NI'],
+    BAH: ['Bahlinger SC', 'BW'],
+    SMZ: ['TSV Schott Mainz', 'RS'],
+  };
+  const teams: Teams = {
+    ...createLeagueTeams(l1teams, '1'),
+    ...createLeagueTeams(l2teams, '2'),
+    ...createLeagueTeams(l3teams, '3'),
+    ...createLeagueTeams(l4teams, ([_, region]) => `4${region}`),
+    ...createLeagueTeams(l5teams, ([_, region]) => `5${region}`),
+    };
+  const leagueType = "m" as const;
+  export { teams, leagueType };
