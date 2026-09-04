@@ -37,7 +37,7 @@ type MatchProps = {
 }
 
 type RoundProps = {
-  matches: (Match | undefined)[]
+  matches: (Match | undefined)[] | undefined
   title: string
   type: "f" | "m"
 }
