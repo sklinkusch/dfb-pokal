@@ -15,6 +15,28 @@ export const ROUND_ORDER: RoundName[] = [
 type Data = Record<RoundName, Match[]>;
 
 const data: Data = {
+    Finale: getRound(teams, []),
+    Halbfinale: getRound(teams, []),
+    Viertelfinale: getRound(teams, []),
+    Achtelfinale: getRound(teams, []),
+    '2. Hauptrunde': getRound(teams, [
+        {home: 'GAS', away: 'FCA'},
+        {home: 'JED', away: 'BSC'},
+        {home: 'RWE', away: 'RBL'},
+        {home: 'KÖL', away: 'FCU'},
+        {home: 'DRE', away: 'S04'},
+        {home: 'BVB', away: 'SVW'},
+        {home: 'BOC', away: 'M05'},
+        {home: 'HSV', away: 'SGE'},
+        {home: 'MGL', away: 'KSC'},
+        {home: 'FCB', away: 'FCM'},
+        {home: 'KIE', away: 'HOF'},
+        {home: 'SCF', away: 'WOB'},
+        {home: 'H96', away: 'FCK'},
+        {home: 'B04', away: 'FCN'},
+        {home: 'P07', away: 'VfB'},
+        {home: 'SVE', away: 'D98'},
+    ]),
     '1. Hauptrunde': getRound(teams, [
         {home: 'STT', away: 'SGE', date: '2026-08-21T16:00Z', result: '0:11', identifier: 2},
         {home: 'WMA', away: 'FCK', date: '2026-08-21T16:00Z', result: '0:0, 0:1 n.V.', identifier: 2},
@@ -49,11 +71,6 @@ const data: Data = {
         {home: 'HEB', away: 'BVB', date: '2026-09-01T18:45Z', result: '0:5', identifier: 2},
         {home: 'OSN', away: 'FCB', date: '2026-09-02T18:45Z', result: '1:4', identifier: 2},
     ]),
-    '2. Hauptrunde': getRound(teams, []),
-    Achtelfinale: getRound(teams, []),
-    Viertelfinale: getRound(teams, []),
-    Halbfinale: getRound(teams, []),
-    Finale: getRound(teams, []),
 }
 
 export { data };
