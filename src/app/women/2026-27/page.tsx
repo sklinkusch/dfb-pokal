@@ -6,7 +6,7 @@ import styles from '@/styles/index.module.css'
 import { leagueType } from '@/teams/women/2026-27'
 import { data, ROUND_ORDER } from '@/data/women/2026-27'
 
-export default function DFBPokal_2025_26() {
+export default function DFBPokal_2026_27() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>DFB-Pokal 2026/27</h1>
