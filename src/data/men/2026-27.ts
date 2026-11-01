@@ -18,7 +18,16 @@ const data: Data = {
     Finale: getRound(teams, []),
     Halbfinale: getRound(teams, []),
     Viertelfinale: getRound(teams, []),
-    Achtelfinale: getRound(teams, []),
+    Achtelfinale: getRound(teams, [
+        {home: 'SGE', away: 'BVB'},
+        {home: 'VfB', away: 'DRE'},
+        {home: 'B04', away: 'RBL'},
+        {home: 'FCB', away: 'BSC'},
+        {home: 'MGL', away: 'D98'},
+        {home: 'FCK', away: 'SCF'},
+        {home: 'KIE', away: 'KÖL'},
+        {home: 'BOC', away: 'FCA'},
+    ]),
     '2. Hauptrunde': getRound(teams, [
         {home: 'BOC', away: 'M05', date: '2026-10-27T17:00Z', result: '2:0', identifier: 1},
         {home: 'GAS', away: 'FCA', date: '2026-10-27T17:00Z', result: '2:4', identifier: 2},
